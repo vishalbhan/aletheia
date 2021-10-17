@@ -1,7 +1,16 @@
-import '@styles/globals.css'
+import Head from 'next/head'
+import '../styles/globals.css'
 
-function Application({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }) {
+  return (
+      <>
+        <Head>
+          <title>Aletheia | Advanced Private Tuition</title>
+        </Head>
+
+        <Component {...pageProps} />
+      </>
+  )
 }
 
-export default Application
+export default MyApp

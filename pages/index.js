@@ -1,23 +1,39 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import Navigation from '../components/navigation'
+import HeroSection from '../components/HeroSection'
+import AboutSection from '../components/AboutSection'
+import ServicesSection from '../components/ServicesSection'
+import QuoteSection from '../components/QuoteSection'
+import DifferentSection from '../components/DifferentSection'
+import WhySection from '../components/WhySection'
+import ProcessSection from '../components/ProcessSection'
+import TutorsSection from '../components/TutorsSection'
 
-export default function Home() {
+export default function Home() { 
   return (
-    <div className="container">
-      <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div>
 
-      <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-      </main>
+      <Navigation />
 
-      <Footer />
+      <div className="scroll-snap-container">
+        
+        <HeroSection />
+
+        <AboutSection />
+
+        <ServicesSection />
+
+        <QuoteSection />
+
+        <DifferentSection />
+
+        <WhySection />
+
+        <TutorsSection />
+
+        <ProcessSection />
+
+      </div>
+
     </div>
   )
 }

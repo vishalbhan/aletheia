@@ -1,35 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+@font-face {
+  font-family: 'Mrs Eaves Bold';
+  src: url('./fonts/MrsEaves-Bold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Palantino Light';
+  src: url('./fonts/PalatinoLTPro-Light.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Palantino Bold';
+  src: url('./fonts/PalatinoLTPro-Bold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Palantino Italic';
+  src: url('./fonts/PalatinoLTPro-LightItalic.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Retro Signature';
+  src: url('./fonts/RetroSignature.otf') format('otf');
+}
+
+:root {
+  --dark-green: #122223;
+  --golden: #DA9E63;
+  --cream: #EAE5D2;
+}
+
+main {
+  height: auto;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: var(--dark-green);
+  color: var(--dark-green);
+  text-align: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
 }
 
-main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+nav {
+  z-index: 1;
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr 200px 1fr;
   align-items: center;
+  padding: 40px;
 }
 
-code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-family: Menlo, Monaco, Lucida Console, Courier New, monospace;
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.container {
+.nav-item {
+  font-family: 'Mrs Eaves Bold';
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--golden);
+  padding: 5px;
+  cursor: pointer;
+}
+
+.nav-logo {
+  padding: 0 40px;
+}
+
+h1 {
+  font-family: 'Mrs Eaves Bold';
+  font-weight: normal;
+  font-size: 42px;
+  letter-spacing: 1px;
+  line-height: 140%;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+
+p {
+  font-family: 'Palantino Light';
+  font-size: 24px;
+  line-height: 140%;  
+}
+
+p.testimonial {
+  font-family: 'Palatino Italic';
+  font-style: italic;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 17px;  
+  letter-spacing: 4px;
+  color: var(--golden);
+  text-transform: uppercase;
+  padding: 12px 50px;
+  background: transparent;
+  border: 1px solid var(--golden);
+  cursor: pointer;
+}
+
+.font-weight-bold {
+  font-weight: 600;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.place-items-center {
+  display: grid;
+  place-items: center;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.bg-cream {
+  background: var(--cream);
+}
+
+.text-dark {
+  color: var(--dark-green);
+}
+
+.scroll-snap-container {
+  scroll-snap-type: y proximity;
+}
+
+.scroll-snap-container > section {
+  scroll-snap-align: start;
+}
+
+section {
+  position: relative;
+  padding: 140px 0;
+  min-height: 100vh;
+}
+
+#hero {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  color: var(--golden);
+  padding: 40px 0 0;
+}
+
+#hero h1 {
+  font-size: 50px;
+  margin-bottom: 80px;
+}
+
+.hero-image {
+  max-width: 320px;
+}
+
+#about {
+  color: var(--dark-green);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#about p {  
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.about-image {
+  max-width: 240px;
+  margin: 0 auto;
+}
+
+.about-quote {
+  grid-column: 1 / span 3;
+  margin-left: 24px;
+  margin-bottom: 40px;
+}
+
+#services {
+  color: var(--golden);
+}
+
+#services p {
+  color: var(--cream);
+  font-family: 'Mrs Eaves Bold';
+  font-size: 28px;
+  line-height: 185%;
+}
+
+.services-image {
+  max-width: 450px;
+}
+
+#values p {
+  max-width: 785px;
+}
+
+.values-image {
+  z-index: 1;
+  max-width: 850px;
+}
+
+#different {
+  color: var(--golden);
+}
+
+#different p {
+  max-width: 650px;
+  color: var(--cream);
+}
+
+.different-image {
+  width: 850px;
+}
+
+.different-section-2 {
+  margin-top: 120px;
+  text-align: right;
+  margin-right: 60px;
+}
+
+.different-section-3 {
+  margin-top: 100px;
+}
+
+.why-para {
+  font-size: 32px;
+  margin-bottom: 72px;
+}
+
+#process p {
+  max-width: 1000px;
+}
+
+.process-image {
+  max-width: 340px;
+}
+
+#tutors {
+  color: var(--cream);
+}
+
+#tutors h1 {
+  color: var(--golden);
+}
+
+.tutors-grid {
+  max-width: 1120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
+}
+
+.tutor-image {
+  max-width: 240px;
+  margin: 0 auto 25px;
+}
+
+.tutor-name {
+  font-family: 'Mrs Eaves Bold';
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+.tutor-qualifications {
+  font-family: 'Mrs Eaves Bold';
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+.tutor-about {
+  font-size: 20px;
 }
