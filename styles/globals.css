@@ -159,7 +159,6 @@ button {
 section {
   position: relative;
   padding: 140px 0;
-  margin: 150px 0;
   min-height: 100vh;
   visibility: hidden;
   scroll-snap-align: start;

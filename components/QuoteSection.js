@@ -20,7 +20,6 @@ export default function QuoteSection() {
             end: "bottom 10%",
             once: true,
             onEnter: () => {
-                gsap.set(sectionRef.current, { visibility: 'visible' });
                 let tl = new gsap.timeline()
                 tl.from(paraRef.current, 1, { opacity: 0, y: 20 })
                 tl.from(imageRef.current, 1.5, { opacity: 0, y: 100, scale: 0.5 }, "-=1")
@@ -32,7 +31,14 @@ export default function QuoteSection() {
             fastScrollEnd: true,
             start: "top 10%",
             end: "bottom 10%",
-            onToggle: self => self.isActive ? gsap.to("body", { duration: 0.3, background: "#EAE5D2" }) : ''
+            onToggle: self => {
+                if (self.isActive) {
+                    gsap.to("body", { duration: 0.3, background: "#EAE5D2" })
+                    gsap.set(sectionRef.current, { visibility: 'visible' });
+                } else {
+                    gsap.set(sectionRef.current, { visibility: 'hidden' });
+                }
+            }
         })
     }, [])
 

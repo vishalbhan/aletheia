@@ -25,7 +25,6 @@ export default function DifferentSection() {
             end: "bottom 10%",
             once: true,
             onEnter: () => {
-                gsap.set(sectionRef.current, { visibility: 'visible' });
                 let tl = new gsap.timeline()
                 let split = new SplitText(titleRef.current, { type: 'lines, chars' });
                 tl.staggerFrom(split.chars, 0.4, { opacity: 0, y: 5, delay: 0 }, 0.03)
@@ -40,7 +39,14 @@ export default function DifferentSection() {
             fastScrollEnd: true,
             start: "top 10%",
             end: "bottom 10%",
-            onToggle: self => self.isActive ? gsap.to("body", { duration: 0.3, background: "#122223" }) : ''
+            onToggle: self => {
+                if (self.isActive) {
+                    gsap.to("body", { duration: 0.3, background: "#122223" })
+                    gsap.set(sectionRef.current, { visibility: 'visible' });
+                } else {
+                    gsap.set(sectionRef.current, { visibility: 'hidden' });
+                }
+            }
         })
 
         gsap.from(testimonialRef.current, {
