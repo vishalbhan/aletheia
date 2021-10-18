@@ -9,6 +9,7 @@ import DifferentQuote from '../components/DifferentQuote'
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
 export default function DifferentSection() {
+    const sectionRef = useRef()
     const mainRef = useRef()
     const titleRef = useRef()
     const paraRef = useRef()
@@ -23,6 +24,7 @@ export default function DifferentSection() {
             start: "top 50%",
             once: true,
             onEnter: () => {
+                gsap.set(sectionRef.current, { visibility: 'visible' });
                 gsap.to("body", { duration: 0.3, background: "#122223" })
                 let tl = new gsap.timeline()
                 let split = new SplitText(titleRef.current, { type: 'lines, chars' });
@@ -50,7 +52,7 @@ export default function DifferentSection() {
     }, [])
 
     return (
-        <section id="different">
+        <section id="different" ref={sectionRef}>
 
             <div className="different-section-1 place-items-center"ref={mainRef}>
                 <div className="position-absolute different-image" ref={imageRef}>

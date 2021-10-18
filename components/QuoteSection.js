@@ -19,6 +19,7 @@ export default function QuoteSection() {
             start: "top 50%",
             once: true,
             onEnter: () => {
+                gsap.set(sectionRef.current, { visibility: 'visible' });
                 gsap.to("body", { duration: 0.3, background: "#EAE5D2" })
                 let tl = new gsap.timeline()
                 tl.from(paraRef.current, 1, { opacity: 0, y: 20 })

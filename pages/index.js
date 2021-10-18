@@ -8,32 +8,28 @@ import WhySection from '../components/WhySection'
 import ProcessSection from '../components/ProcessSection'
 import TutorsSection from '../components/TutorsSection'
 
-export default function Home() { 
+export default function Home() {
   return (
-    <div>
+    <>
 
       <Navigation />
-
-      <div className="scroll-snap-container">
         
-        <HeroSection />
+      <HeroSection />
 
-        <AboutSection />
+      <AboutSection />
 
-        <ServicesSection />
+      <ServicesSection />
 
-        <QuoteSection />
+      <QuoteSection />
 
-        <DifferentSection />
+      <DifferentSection />
 
-        <WhySection />
+      <WhySection />
 
-        <TutorsSection />
+      <TutorsSection />
 
-        <ProcessSection />
+      <ProcessSection />
 
-      </div>
-
-    </div>
+    </>
   )
 }

@@ -20,6 +20,7 @@ export default function ServicesSection() {
             start: "top 50%",
             once: true,
             onEnter: () => {
+                gsap.set(sectionRef.current, { visibility: 'visible' });
                 gsap.to("body", { duration: 0.3, background: "#122223" })
                 let tl = new gsap.timeline()
                 let split = new SplitText(titleRef.current, { type: 'lines, chars' });

@@ -22,6 +22,7 @@ export default function TutorsSection() {
             start: "top 50%",
             once: true,
             onEnter: () => {
+                gsap.set(sectionRef.current, { visibility: 'visible' });
                 gsap.to("body", { duration: 0.3, background: "#122223" })
                 let tl = new gsap.timeline()
                 let split = new SplitText(titleRef.current, { type: 'lines, chars' });
@@ -37,11 +38,12 @@ export default function TutorsSection() {
 
     return (
         <section id="tutors" className="place-items-center" ref={sectionRef}>
+            
             <div className="position-absolute values-image" ref={imageRef}>
                 <Image src={birdofparadise} alt="" />
             </div>
 
-            <div>
+            <div className="position-absolute z-1">
                 <h1 ref={titleRef}>Meet Our Tutors</h1>
                 <div className="tutors-grid">
                     <div className="tutors-item">
@@ -62,7 +64,7 @@ export default function TutorsSection() {
                     </div>
                     <div className="tutors-item">
                         <div className="tutor-image"><Image src={kalle} /></div>
-                        <div className="tutor-name">Kalle Timperi</div>
+                        <div className="tutor-name">Dr. Kalle Timperi</div>
                         <div className="tutor-qualification">PhD MSc BSc</div>
                         <p className="tutor-about">
                             Kalle obtained his BSc and MSc in pure mathematics at the University of Helsinki, Finland. To satisfy his curiosity towards complex phenomena in nature and society, he went on to complete his PhD on random dynamical systems at Imperial College London. Kalle communicates scientific ideas with a combination of passion and devotion, and he received the second price in the Virtual Maths Symposium Competition at Imperial. Kalle is driven by the desire to uncover unifying threads between apparently disparate fields and activities, testified by his varied activity as a teacher, free-lance pianist and amateur Go player.
@@ -71,7 +73,7 @@ export default function TutorsSection() {
                     <div className="tutors-item">
                         <div className="tutor-image"><Image src={lee} /></div>
                         <div className="tutor-name">Lee Sharkey</div>
-                        <div className="tutor-qualification">MSc, MSc BA (Cantab)</div>
+                        <div className="tutor-qualification">MSc, MSc, BA (Cantab)</div>
                         <p className="tutor-about">
                             Lee studied preclinical medicine and neuroscience at Pembroke College (Cambridge) and worked as a public health consultant at the World Health Organisation in the early years of his career. He was drawn away from a career in Health by his deep curiosity for artificial intelligence, which he studied throughout two MSc degrees: one in Data Analytics in Glasgow (awarded with Distinction) and the other in Neural Systems and Computation at ETH Zürich, where he worked as a teaching assistant. Currently, Lee is a PhD candidate in the Human and Machine Cognition lab at the University of Tübingen, where he researches how to build principles of human intelligence into machines.
                         </p>
