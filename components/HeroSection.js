@@ -18,8 +18,8 @@ export default function HeroSection() {
             scrollTrigger: {
                 trigger: sectionRef.current,
                 start: "top top",
-                onLeave: () => {
-                    gsap.to("body", { duration: 0.3, background: "#EAE5D2" })
+                onEnterBack: () => {
+                    gsap.to("body", { duration: 0.3, background: "#122223" })
                 }
             }
         });

@@ -159,6 +159,7 @@ button {
 section {
   position: relative;
   padding: 140px 0;
+  margin: 150px 0;
   min-height: 100vh;
   visibility: hidden;
   scroll-snap-align: start;
@@ -168,6 +169,7 @@ section {
   height: 100vh;
   color: var(--golden);
   padding: 40px 0 0;
+  margin-top: 0;
   visibility: visible;
 }
 
@@ -263,7 +265,7 @@ section {
 }
 
 #tutors {
-  min-height: 150vh;
+  min-height: 180vh;
   color: var(--cream);
 }
 
