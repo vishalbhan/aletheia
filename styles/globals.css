@@ -6,8 +6,13 @@
 }
 
 @font-face {
+  font-family: 'Mrs Eaves Roman';
+  src: url('./fonts/MrsEaves-Roman.ttf') format('ttf');
+}
+
+@font-face {
   font-family: 'Palantino Light';
-  src: url('./fonts/PalatinoLTPro-Light.ttf') format('ttf');
+  src: url('./fonts/PalatinoLTPro-Roman.ttf') format('ttf');
 }
 
 @font-face {
@@ -41,7 +46,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background: var(--dark-green);
-  color: var(--dark-green);
+  color: var(--cream);
   text-align: center;
 }
 
@@ -54,45 +59,24 @@ a {
   box-sizing: border-box;
 }
 
-nav {
-  z-index: 1;
-  position: absolute;
-  width: 100vw;
-  top: 0;
-  display: grid;
-  grid-template-columns: 1fr 200px 1fr;
-  align-items: center;
-  padding: 40px;
-}
-
-.nav-left, .nav-right {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.nav-item {
-  font-family: 'Mrs Eaves Bold';
-  font-size: 14px;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  color: var(--golden);
-  padding: 5px;
-  cursor: pointer;
-}
-
-.nav-logo {
-  padding: 0 40px;
-}
-
 h1 {
-  font-family: 'Mrs Eaves Bold';
+  font-family: 'Mrs Eaves Roman';
   font-weight: normal;
   font-size: 42px;
   letter-spacing: 1px;
   line-height: 140%;
   text-transform: uppercase;
-  margin-bottom: 60px;
+  margin-bottom: 32px;
+  color: var(--golden);
+}
+
+h2 {
+  font-family: 'Mrs Eaves Roman';
+  font-weight: normal;
+  font-size: 20px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 p {
@@ -101,23 +85,29 @@ p {
   line-height: 140%;  
 }
 
+p.large {
+  font-size: 32px;
+  letter-spacing: 0.5px;
+  line-height: 155%;
+}
+
 p.testimonial {
   font-family: 'Palatino Italic';
   font-style: italic;
 }
 
 button {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size: 17px;  
-  letter-spacing: 4px;
-  color: var(--golden);
+  font-family: 'Mrs Eaves Roman', serif;
+  font-size: 15px;  
+  letter-spacing: 3.2px;
   text-transform: uppercase;
-  padding: 12px 50px;
-  background: transparent;
-  border: 1px solid var(--golden);
+  padding: 24px 36px;
+  background: var(--cream);
+  color: var(--dark-green);
   cursor: pointer;
 }
+
+/* Utilities */
 
 .font-weight-bold {
   font-weight: 600;
@@ -136,12 +126,22 @@ button {
   place-items: center;
 }
 
+.position-relative {
+  position: relative;
+}
+
 .position-absolute {
   position: absolute;
 }
 
-.z-1 {
-  z-index: 1;
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
 }
 
 .bg-cream {
@@ -156,147 +156,177 @@ button {
   color: var(--dark-green);
 }
 
+/* Common to sections */
+
 section {
   position: relative;
-  padding: 140px 0;
   min-height: 100vh;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.fade-up {
+  opacity: 0;
   visibility: hidden;
-  scroll-snap-align: start;
+  transform: translateY(20px);
+  transition: all 1s ease;
 }
 
-#hero {
-  height: 100vh;
-  color: var(--golden);
-  padding: 40px 0 0;
-  margin-top: 0;
+.fade-up.in-view {
+  opacity: 1;
   visibility: visible;
+  transform: translateY(0);
 }
 
-#hero h1 {
-  font-size: 50px;
-  margin-bottom: 80px;
+.line {
+  height: 1px;
+  width: 0;
+  background: var(--cream);
+  opacity: 20%;
+  transition: width 0.6s ease;
+}
+
+.line.in-view {
+  width: 100%;
+}
+
+header {
+  z-index: 1;
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  display: grid;
+  place-items: center;
+  padding: 40px;
+}
+
+.header-logo {
+  width: 120px;
+  margin: 20px;
+  text-align: center;
+}
+
+.intro-text {
+  padding-top: 250px
+}
+
+.intro-text h1 {
+  font-size: 58px;
+  font-family: 'Mrs Eaves Roman';
+  letter-spacing: 3px;
+  margin-bottom: 120px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+.intro-text.in-view h1 {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 42px;
+}
+
+.nav-item {
+  font-size: 14px;
+  font-family: 'Mrs Eaves Roman';
+  background: transparent;
+  color: var(--golden);
+  text-transform: uppercase;
+  letter-spacing: 3.2px;
+  padding: 30px 60px;
+  border: 1px solid #EAE5D220;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.nav-item:hover {
+  background: var(--cream);
+  color: var(--dark-green)
 }
 
 .hero-image {
-  max-width: 360px;
+  max-width: 640px;
+  position: absolute;
   top: 120px;
+  left: calc(50% - 320px);
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.5s linear;
 }
 
-#about {
-  color: var(--dark-green);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.hero-image.in-view {
+  opacity: 1;
+  visibility: visible;
 }
 
-#about p {  
-  max-width: 500px;
+.about-text {
+  padding: 150px 0;
+  max-width: 940px;
   margin: 0 auto;
 }
 
 .about-image {
-  max-width: 240px;
-  margin: 0 auto;
-}
-
-.about-quote {
-  grid-column: 1 / span 3;
-  margin-left: 24px;
-  margin-bottom: 40px;
+  position: absolute;
+  width: 1000px;
+  left: 50%;
+  top: 20%;
 }
 
 #services {
-  color: var(--golden);
+  margin-top: -200px;
 }
 
-#services p {
-  color: var(--cream);
-  font-family: 'Mrs Eaves Bold';
-  font-size: 28px;
-  line-height: 185%;
+.services-header {
+  padding: 24px 0;
 }
 
-.services-image {
-  max-width: 450px;
+.services-header h2 {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.9s ease;
 }
 
-#values p {
-  max-width: 785px;
+.services-header h2:nth-child(2) {
+  transition-delay: 0.15s
 }
 
-.values-image {
-  z-index: 1;
-  max-width: 850px;
+.services-header h2:nth-child(3) {
+  transition-delay: 0.3s
 }
 
-#different {
-  color: var(--golden);
+.services-header h2.in-view {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
-#different p {
-  max-width: 650px;
-  color: var(--cream);
+.services-items {
+  padding: 42px 0;
 }
 
-.different-image {
-  width: 850px;
+.services-item p {
+  letter-spacing: 1.6px;
+  margin-bottom: 42px;
 }
 
-.different-section-2 {
-  margin-top: 120px;
-  text-align: right;
-  margin-right: 60px;
+.services-item:nth-child(2) {
+  transition-delay: 0.15s
 }
 
-.different-section-3 {
-  margin-top: 100px;
+.services-item:nth-child(3) {
+  transition-delay: 0.3s;
 }
 
-.why-para {
-  font-size: 32px;
-  margin-bottom: 72px;
-}
-
-#process p {
-  max-width: 1000px;
-}
-
-.process-image {
-  max-width: 340px;
-}
-
-#tutors {
-  min-height: 230vh;
-  color: var(--cream);
-}
-
-#tutors h1 {
-  color: var(--golden);
-}
-
-.tutors-grid {
-  max-width: 1120px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 100px;
-}
-
-.tutor-image {
-  max-width: 240px;
-  margin: 0 auto 25px;
-}
-
-.tutor-name {
-  font-family: 'Mrs Eaves Bold';
-  text-transform: uppercase;
-  font-size: 24px;
-}
-
-.tutor-qualifications {
-  font-family: 'Mrs Eaves Bold';
-  text-transform: uppercase;
-  font-size: 24px;
-}
-
-.tutor-about {
-  font-size: 20px;
-}
