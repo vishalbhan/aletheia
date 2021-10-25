@@ -178,7 +178,8 @@ section {
 }
 
 .hero-image {
-  max-width: 450px;
+  max-width: 360px;
+  top: 120px;
 }
 
 #about {
@@ -264,7 +265,7 @@ section {
 }
 
 #tutors {
-  min-height: 180vh;
+  min-height: 230vh;
   color: var(--cream);
 }
 

@@ -35,7 +35,7 @@ export default function WhySection() {
             end: "bottom 10%",
             onToggle: self => {
                 if (self.isActive) {
-                    gsap.to("body", { duration: 0.3, background: "#EAE5D2" })
+                    gsap.to("body", { duration: 0.6, background: "#EAE5D2", ease: 'power1.inOut' })
                     gsap.set(sectionRef.current, { visibility: 'visible' });
                 } else {
                     gsap.set(sectionRef.current, { visibility: 'hidden' });

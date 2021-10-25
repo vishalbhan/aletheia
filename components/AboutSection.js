@@ -42,7 +42,7 @@ export default function AboutSection() {
             end: "bottom 10%",
             onToggle: self => {
                 if (self.isActive) {
-                    gsap.to("body", { duration: 0.3, background: "#EAE5D2" })
+                    gsap.to("body", { duration: 0.6, background: "#EAE5D2", ease: 'power1.inOut' })
                     gsap.set(sectionRef.current, { visibility: 'visible' });
                 } else {
                     gsap.set(sectionRef.current, { visibility: 'hidden' });
@@ -65,7 +65,7 @@ export default function AboutSection() {
             <div>
                 <h1 ref={titleRef}>We Are Aletheia</h1>
                 <p ref={paraRef}>
-                    Aletheia is a highly selective community of both students and doctoral-level educators, a unique space in which academic research and tuition flourish symbiotically.
+                    Aletheia is a highly selective community of doctoral-level educators, providing our students with a unique space in which academic research and tuition flourish symbiotically.
                     <br /><br />
                     Entwining our roots in the Oxbridge collegiate system with over a decade of tuition experience worldwide, we deliver a university environment for all students regardless of age.
                 </p>

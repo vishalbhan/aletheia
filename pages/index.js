@@ -10,7 +10,7 @@ import TutorsSection from '../components/TutorsSection'
 
 export default function Home() {
   return (
-    <>
+    <div data-scroll-section>
 
       <Navigation />
         
@@ -30,6 +30,6 @@ export default function Home() {
 
       <ProcessSection />
 
-    </>
+    </div>
   )
 }

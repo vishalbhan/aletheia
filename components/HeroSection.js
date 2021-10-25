@@ -18,7 +18,7 @@ export default function HeroSection() {
             scrollTrigger: {
                 trigger: sectionRef.current,
                 start: "top top",
-                onToggle: self => self.isActive ? gsap.to("body", { duration: 0.3, background: "#122223" }) : ''
+                onToggle: self => self.isActive ? gsap.to("body", { duration: 0.6, background: "#122223", ease: 'power1.inOut' }) : ''
             }
         });
     }, [])
