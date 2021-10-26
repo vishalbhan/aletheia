@@ -25,6 +25,7 @@ export default function AboutSection() {
             end: "bottom 10%",
             once: true,
             onEnter: () => {
+                console.log('entered')
                 let tl = new gsap.timeline()
                 let split = new SplitText(titleRef.current, { type: 'lines, chars' });
                 tl.staggerFrom(split.chars, 0.4, { opacity: 0, y: 5, delay: 0 }, 0.03)
