@@ -107,9 +107,9 @@ export default function Home() {
           
           <div className="services-header text-center">
             <div className="overflow-hidden grid-3">
-              <h2 data-scroll>School Tuition</h2>
-              <h2 data-scroll>University Tuition</h2>
-              <h2 data-scroll>Mentoring &amp; Advice</h2>
+              <h2 data-scroll>School<br/>Tuition</h2>
+              <h2 data-scroll>University<br/>Tuition</h2>
+              <h2 data-scroll>Mentoring &amp;<br/>Advice</h2>
             </div>
           </div>
 

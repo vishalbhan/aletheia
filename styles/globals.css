@@ -75,8 +75,9 @@ h1 {
 h2 {
   font-family: 'Mrs Eaves Roman';
   font-weight: normal;
-  font-size: 20px;
+  font-size: 28px;
   letter-spacing: 1.2px;
+  line-height: 150%;
   text-transform: uppercase;
   color: #fff;
 }
