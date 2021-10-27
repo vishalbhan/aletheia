@@ -34,6 +34,7 @@
   --dark-green: #122223;
   --golden: #DA9E63;
   --cream: #EAE5D2;
+  --color-ease: cubic-bezier(.55,0,.1,1);
 }
 
 main {
@@ -45,9 +46,10 @@ body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: var(--dark-green);
   color: var(--cream);
   text-align: center;
-  transition: background-color 1s ease;
+  transition: background-color .6s cubic-bezier(.55,0,.1,1);
 }
 
 a {
@@ -86,7 +88,7 @@ p {
 }
 
 p.large {
-  font-size: 32px;
+  font-size: 28px;
   letter-spacing: 0.5px;
   line-height: 155%;
 }
@@ -94,6 +96,23 @@ p.large {
 p.testimonial {
   font-family: 'Palatino Italic';
   font-style: italic;
+}
+
+.quote {
+  font-family: 'Retro Signature';
+  font-size: 80px;
+  line-height: 80%;
+  color: rgba(0,0,0,0.2);
+}
+
+.quote-logo-container {
+  display: grid;
+  place-items: center;
+  margin-bottom: 24px;
+}
+
+.quote-logo {
+  width: 74px;
 }
 
 button {
@@ -230,10 +249,23 @@ header {
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
-  transition: all 1s ease;
+  transition: all 1.5s var(--color-ease);
 }
 
 .intro-text.in-view h1 {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.header-navigation {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: all 1.5s var(--color-ease) 0.3s;
+}
+
+.header-navigation.in-view {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -264,6 +296,19 @@ nav {
   color: var(--dark-green)
 }
 
+.header-cta {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.8s var(--color-ease) 0.8s;
+}
+
+.header-cta.in-view {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 .hero-image-container {
   z-index: -1;
   position: absolute;
@@ -273,10 +318,10 @@ nav {
 }
 
 .hero-image {
-  width: 480px;
+  width: 560px;
   opacity: 0;
   visibility: hidden;
-  transition: width 0.7s ease, opacity 1.5s linear;
+  transition: width 1.5s var(--color-ease), opacity 1.5s linear;
 }
 
 .hero-image.in-view {
@@ -287,7 +332,7 @@ nav {
 
 .about-text {
   padding: 150px 0;
-  max-width: 940px;
+  max-width: 760px;
   margin: 0 auto;
   opacity: 0;
   transition: opacity 0.8s ease;
@@ -353,17 +398,82 @@ nav {
 
 .mushroom-1 {
   position: absolute;
-  bottom: -40%;
+  bottom: -30%;
   left: -30%;
   width: 1000px;
 }
 
 #different {
-  padding: 150px 0;
+  min-height: 0;
+  padding: 100px 0;
 }
 
 .different-text {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.mushroom-2 {
+  position: absolute;
+  bottom: -75%;
+  right: -30%;
+  width: 1000px;
+}
+
+#quote-1 {
+  min-height: 0;
+  padding: 50px 0;
+  margin-bottom: 100px;
+}
+
+.quote-1-container {
+  width: 540px;
+}
+
+#ethos {
+  min-height: 0;
+  padding: 100px 0;
+}
+
+.ethos-text {
   max-width: 840px;
   margin-left: auto;
+}
+
+.octopus-image {
+  width: 1000px;
+  position: absolute;
+  bottom: -60%;
+  left: -20%;
+}
+
+#process {
+  padding: 150px 0;
+}
+
+.process-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.process-number {
+  font-family: 'Mrs Eaves Bold';
+  color: var(--golden);
+  font-size: 80px;
+  opacity: 0.4;
+  padding: 12px 48px 12px 24px;
+}
+
+.process-text {
+  margin-right: 20%;
+}
+
+.seahorse-image {
+  width: 420px;
+  position: absolute;
+  right: 5%;
+  bottom: 0;
 }
 

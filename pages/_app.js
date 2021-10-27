@@ -46,6 +46,10 @@ const ScrollTriggerProxy = () => {
 function MyApp({ Component, pageProps }) {
   const containerRef = useRef(null)
 
+  useEffect(() => {
+    document.querySelector('body').classList.add('bg-dark')
+  }, [])
+
   return (
     <>
       <Head>
@@ -67,8 +71,8 @@ function MyApp({ Component, pageProps }) {
         }
         containerRef={containerRef}
       >
-        <ScrollTriggerProxy />
         <main data-scroll-container ref={containerRef}>
+          <ScrollTriggerProxy />
           <Component {...pageProps} />
         </main>
       </LocomotiveScrollProvider>
