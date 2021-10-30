@@ -8,6 +8,10 @@ import mushroom from '../public/images/mushrooms.png'
 import LogoTree from '@components/LogoTree'
 import octopus from '../public/images/octopus.png'
 import seahorseright from '../public/images/seahorseright.png'
+import seahorseleft from '../public/images/seahorseleft.png'
+import pineapple from '../public/images/pineapple.png'
+import TutorsSlider from '@components/TutorsSlider'
+import TestimonialSlider from '@components/TestimonialSlider'
 // import useIntersectionObserver from 'utils/useIntersectionObserver'
 // import useScrollDirection from 'utils/useScrollDirection'
 
@@ -56,22 +60,21 @@ export default function Home() {
       </header>
 
       <section id="hero">
-        <div className="intro-text" data-scroll>
-          <h1>
-            Advanced<br/>
-            Private Tuition
-          </h1>
-        </div>
-        <div className="header-navigation" data-scroll>
-          <nav>
-            <div className="nav-item">Who We Are</div>
-            <div className="nav-item">Services</div>
-            <div className="nav-item">Our Process</div>
-            <div className="nav-item">Why Aletheia?</div>
-          </nav>
-        </div>
-        <div className="header-cta" data-scroll>
-          <button>Make An Enquiry</button>
+        <div className="hero-content">
+          <div className="intro-text" data-scroll>
+            <h1>
+              Advanced<br/>
+              Private Tuition
+            </h1>
+          </div>
+          <div className="header-navigation" data-scroll>
+            <nav>
+              <div className="nav-item">Who We Are</div>
+              <div className="nav-item">Our Process</div>
+              <div className="nav-item">Why Aletheia?</div>
+              <div className="nav-item">Make an Enquiry</div>
+            </nav>
+          </div>
         </div>
         <div className="hero-image-container" data-scroll>
           <div className="hero-image" data-scroll data-scroll-speed="5">
@@ -125,26 +128,32 @@ export default function Home() {
               <p>postgraduate</p>
             </div>
             <div className="services-item fade-up" data-scroll>
-              <p>interviews</p>
               <p>university applications</p>
               <p>careers advice</p>
             </div>
           </div>
         </div>
 
-        <div className="mushroom-1" data-scroll data-scroll-speed="4">
+        <div className="mushroom-1" data-scroll data-scroll-speed="5">
           <Image src={mushroom} />
+        </div>
+      </section>
+
+      <section id="tutors" data-scroll data-scroll-speed="2">
+        <div className="container">
+          <h1 data-scroll className="fade-up">Meet Our Tutors</h1>
+          <TutorsSlider />
         </div>
       </section>
 
       <div data-scroll data-scroll-call="cream-section" data-scroll-repeat data-scroll-offset="40%">
 
-        <section id="different" className="text-center" data-scroll>
+        <section id="different" className="text-left">
           <div className="container">
 
-            <div className="overflow-hidden">
-              <h1 className="fade-up"data-scroll data-scroll-offset="40%">What makes us different?</h1>
-              <p className="different-text fade-up large text-dark delay-1" data-scroll data-scroll-offset="40%">
+            <div data-scroll>
+              <h1 className="fade-up" data-scroll data-scroll-offset="40%" >What makes us different?</h1>
+              <p className="different-text large text-dark fade-up delay-1" data-scroll data-scroll-offset="40%" >
                 We want to produce proactive young citizens of the world with a strong work ethic and carefully deliberated opinions.
                 <br /><br />
                 Regardless of the subject studied, we value interdisciplinary awareness and not myopic focus.
@@ -153,8 +162,8 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="mushroom-2" data-scroll data-scroll-speed="2">
-              <Image src={mushroom} />
+            <div className="octopus" data-scroll data-scroll-speed="-3">
+              <Image src={octopus} />
             </div>
 
           </div>
@@ -190,8 +199,8 @@ export default function Home() {
 
           </div>
 
-          <div className="octopus-image" data-scroll data-scroll-speed="5">
-            <Image src={octopus} />
+          <div className="mushroom-2" data-scroll data-scroll-speed="5">
+            <Image src={mushroom} />
           </div>
         </section>
 
@@ -227,12 +236,49 @@ export default function Home() {
 
           </div>
 
-          <div className="seahorse-image" data-scroll data-scroll-speed="6">
-            <Image src={seahorseright} />
+          <div className="pineapple" data-scroll data-scroll-speed="7">
+            <Image src={pineapple} />
           </div>
         </section>
 
       </div>{/* end cream section */}
+
+      <section id="quote-2">
+        <div className="container">
+
+            <div className="quote-2-container fade-up" data-scroll>
+              <div className="quote-logo-container">
+                <div className="quote-logo"><LogoTree /></div>
+              </div>
+              <div className="quote qoute-2-text">
+              “Man is all symmetrie, Full of proportions, one limbe to another, And all to all the world besides: Each part may call the farthest, brother: For head with foot hath private amitie, And both with moons and tides.”<br/>
+              - George Herbert, The Temple
+              </div>
+            </div>
+
+            <div className="seahorse-left-image" data-scroll data-scroll-speed="6">
+              <Image src={seahorseleft} />
+            </div>
+
+        </div>
+      </section>
+
+      <section id="why" className="text-left">
+        <div className="container">
+
+          <h1 className="why-title fade-up" data-scroll>Why Choose Aletheia?</h1>
+          <p className="why-para fade-up delay-1" data-scroll>Everyone on our team is an <strong>expert</strong> in their field — whether it be ancient history, astrophysics, or artificial intelligence.</p>
+          <p className="why-para fade-up delay-1" data-scroll>Our tutoring service is <strong>bespoke</strong> and constantly evolving, guided by our students' own curiosity and not the strictures of a standard syllabus.</p>
+          <p className="why-para fade-up delay-1" data-scroll>You will study in a truly <strong>interdisciplinary</strong> environment, where the possibilities of your learning journey are supported by our team's mixed and complementary backgrounds.</p>
+        </div>
+      </section>
+
+      <section id="testimonials" data-scroll>
+        <div className="container" data-scroll>
+          <h1 className="fade-up" data-scroll>Testimonials</h1>
+          <TestimonialSlider />
+        </div>
+      </section>
 
     </div>
   )

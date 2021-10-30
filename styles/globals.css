@@ -52,6 +52,10 @@ body {
   transition: background-color .6s cubic-bezier(.55,0,.1,1);
 }
 
+img {
+  max-width: 100%;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -210,6 +214,10 @@ section {
   transition-delay: 0.25s;
 }
 
+.delay-2 {
+  transition-delay: 0.5s;
+}
+
 .line {
   height: 1px;
   width: 0;
@@ -223,34 +231,43 @@ section {
 }
 
 header {
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   width: 100vw;
   top: 0;
+  left: 0;
   display: grid;
   place-items: center;
   padding: 40px;
 }
 
 .header-logo {
-  width: 120px;
+  width: 140px;
   margin: 20px;
   text-align: center;
 }
 
+.hero-content {
+  position: absolute;
+  width: 100%;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .intro-text {
-  padding-top: 250px
+  padding-top: 350px
 }
 
 .intro-text h1 {
-  font-size: 58px;
+  font-size: 50px;
   font-family: 'Mrs Eaves Roman';
   letter-spacing: 3px;
   margin-bottom: 120px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
-  transition: all 1.5s var(--color-ease);
+  transition: all 1.5s var(--color-ease) 0.5s;
 }
 
 .intro-text.in-view h1 {
@@ -263,7 +280,7 @@ header {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-20px);
-  transition: all 1.5s var(--color-ease) 0.3s;
+  transition: all 1.5s var(--color-ease) 0.5s;
 }
 
 .header-navigation.in-view {
@@ -297,23 +314,23 @@ nav {
   color: var(--dark-green)
 }
 
-.header-cta {
+/* .header-cta {
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
-  transition: all 0.8s var(--color-ease) 0.8s;
+  transition: all 0.8s var(--color-ease) 1s;
 }
 
 .header-cta.in-view {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-}
+} */
 
 .hero-image-container {
   z-index: -1;
   position: absolute;
-  top: 120px;
+  top: 80px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -326,7 +343,7 @@ nav {
 }
 
 .hero-image.in-view {
-  width: 640px;
+  width: 600px;
   opacity: 1;
   visibility: visible;
 }
@@ -381,12 +398,12 @@ nav {
 }
 
 .services-items {
-  padding: 42px 0;
+  padding: 60px 0;
 }
 
 .services-item p {
   letter-spacing: 1.6px;
-  margin-bottom: 42px;
+  margin-bottom: 60px;
 }
 
 .services-item:nth-child(2) {
@@ -404,6 +421,83 @@ nav {
   width: 1000px;
 }
 
+#tutors {
+  margin-bottom: 100px;
+}
+
+.tutors-slider-card {
+  width: 100%;
+  background: #EAE5D220;
+  padding: 40px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.tutor-image {
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.tutor-image img {
+  width: 300px;
+  height: 360px;
+  object-fit: cover;
+  object-position: 0% 50%;
+  filter: grayscale(1);
+}
+
+.tutor-about {
+  min-height: 420px;
+  display: grid;
+  place-items: center;
+}
+
+.tutor-about p {
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.tutor-details {
+  grid-column: 1/3;
+}
+
+.tutor-name {
+  font-family: 'Mrs Eaves Roman';
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.tutor-qualification {
+  font-family: 'Mrs Eaves Roman';
+  font-size: 18px;
+}
+
+.slider-nav {
+  display: flex;
+  padding: 20px 0;
+}
+
+.slider-nav-item {
+  cursor: pointer;
+  padding: 12px;
+  margin: 12px 24px;
+  font-family: 'Mrs Eaves Bold';
+  font-size: 40px;
+  transition: all 0.6s var(--color-ease);
+}
+
+.slider-nav-item.active {
+  color: var(--golden);
+}
+
+.cream-section {
+  padding: 100px 0;
+  margin-bottom: 100px;
+}
+
 #different {
   min-height: 0;
   padding: 100px 0;
@@ -411,14 +505,13 @@ nav {
 
 .different-text {
   max-width: 760px;
-  margin: 0 auto;
 }
 
-.mushroom-2 {
-  position: absolute;
-  bottom: -75%;
-  right: -30%;
+.octopus {
   width: 1000px;
+  position: absolute;
+  bottom: -50%;
+  right: -20%;
 }
 
 #quote-1 {
@@ -441,11 +534,11 @@ nav {
   margin-left: auto;
 }
 
-.octopus-image {
+.mushroom-2 {
   width: 1000px;
   position: absolute;
-  bottom: -60%;
   left: -20%;
+  bottom: -10%;
 }
 
 #process {
@@ -465,16 +558,66 @@ nav {
   font-size: 80px;
   opacity: 0.4;
   padding: 12px 48px 12px 24px;
+  margin: 0;
 }
 
 .process-text {
   margin-right: 20%;
 }
 
-.seahorse-image {
+.pineapple {
   width: 420px;
   position: absolute;
   right: 5%;
+  bottom: 10%;
+}
+
+.quote-2-container {
+  max-width: 800px;
+  text-align: right;
+  margin-left: auto;
+}
+
+.seahorse-left-image {
+  width: 420px;
+  position: absolute;
+  left: 5%;
   bottom: 0;
 }
 
+.why-title {
+  margin-bottom: 60px;
+}
+
+.why-para {
+  max-width: 800px;
+  margin-bottom: 50px;
+  font-size: 32px;
+  line-height: 155%;
+}
+
+.testimonial-card {
+  position: relative;
+  width: 100%;
+  background: var(--cream);
+  color: var(--dark-green);
+  padding: 120px 80px 80px;
+  border: 1px solid var(--golden);
+}
+
+.testimonial-card:before {
+  z-index: 1;
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  bottom: 12px;
+  right: 12px;
+}
+
+.testimonial {
+  max-width: 760px;
+  margin: 0 auto;
+  font-style: italic;
+  margin-bottom: 48px;
+}
