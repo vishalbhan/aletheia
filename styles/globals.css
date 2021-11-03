@@ -330,20 +330,20 @@ nav {
 .hero-image-container {
   z-index: -1;
   position: absolute;
-  top: 80px;
+  top: 120px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .hero-image {
-  width: 560px;
+  width: 480px;
   opacity: 0;
   visibility: hidden;
   transition: width 1.5s var(--color-ease), opacity 1.5s linear;
 }
 
 .hero-image.in-view {
-  width: 600px;
+  width: 520px;
   opacity: 1;
   visibility: visible;
 }
@@ -599,20 +599,20 @@ nav {
 .testimonial-card {
   position: relative;
   width: 100%;
-  background: var(--cream);
-  color: var(--dark-green);
+  background: #EAE5D220;
   padding: 120px 80px 80px;
-  border: 1px solid var(--golden);
 }
 
-.testimonial-card:before {
+.testimonial-card:after {
+  content: '';
   z-index: 1;
   display: block;
   position: absolute;
-  top: 12px;
-  left: 12px;
-  bottom: 12px;
-  right: 12px;
+  top: 24px;
+  left: 24px;
+  bottom: 24px;
+  right: 24px;
+  border: 1px solid #EAE5D250;
 }
 
 .testimonial {
