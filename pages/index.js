@@ -13,14 +13,9 @@ import pineapple from '../public/images/pineapple.png'
 import butterfly from '../public/images/butterfly.png'
 import TutorsSlider from '@components/TutorsSlider'
 import TestimonialSlider from '@components/TestimonialSlider'
-// import useIntersectionObserver from 'utils/useIntersectionObserver'
-// import useScrollDirection from 'utils/useScrollDirection'
 
 export default function Home() {
   const { scroll } = useLocomotiveScroll()
-  // const scrollDirection = useScrollDirection()
-  // const diffSectionTrigger = useRef();
-  // const differentSectionEntered = useIntersectionObserver(diffSectionTrigger, { threshold: 0.7 });
 
   useEffect(() => {
     if (scroll) {
@@ -38,18 +33,21 @@ export default function Home() {
     }
   }, [scroll])
 
-  // useEffect(() => {
-  //   if (differentSectionEntered) {
-  //     console.log('intersected')
-  //     if (document.querySelector('body').classList.contains('bg-dark')) {
-  //       document.querySelector('body').classList.remove('bg-dark')
-  //       document.querySelector('body').classList.add('bg-cream')
-  //     } else {
-  //       document.querySelector('body').classList.remove('bg-cream')
-  //       document.querySelector('body').classList.add('bg-dark')
-  //     }
-  //   }
-  // }, [differentSectionEntered])
+  const goToAbout = () => {
+    scroll && scroll.scrollTo("#about")
+  }
+
+  const goToDifferent = () => {
+    scroll && scroll.scrollTo("#different", { duration: 1500 })
+  }
+
+  const goToWhy = () => {
+    scroll && scroll.scrollTo("#why", { duration: 2000 })
+  }
+
+  const goToContact = () => {
+    scroll && scroll.scrollTo("#contact")
+  }
 
   return (
     <div data-scroll-section>
@@ -70,10 +68,10 @@ export default function Home() {
           </div>
           <div className="header-navigation" data-scroll>
             <nav>
-              <div className="nav-item">Who We Are</div>
-              <div className="nav-item">Our Process</div>
-              <div className="nav-item">Why Aletheia?</div>
-              <div className="nav-item">Make an Enquiry</div>
+              <div className="nav-item" onClick={goToAbout}>Who We Are</div>
+              <div className="nav-item" onClick={goToDifferent}>Our Process</div>
+              <div className="nav-item" onClick={goToWhy}>Why Aletheia?</div>
+              <div className="nav-item" onClick={goToContact}>Make an Enquiry</div>
             </nav>
           </div>
         </div>
@@ -163,7 +161,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="octopus" data-scroll data-scroll-speed="-3">
+            <div className="octopus" data-scroll data-scroll-speed="-2">
               <Image src={octopus} />
             </div>
 
@@ -200,7 +198,7 @@ export default function Home() {
 
           </div>
 
-          <div className="mushroom-2" data-scroll data-scroll-speed="5">
+          <div className="mushroom-2" data-scroll data-scroll-speed="3">
             <Image src={mushroom} />
           </div>
         </section>
@@ -272,8 +270,8 @@ export default function Home() {
           <p className="why-para fade-up delay-1" data-scroll>Our tutoring service is <strong>bespoke</strong> and constantly evolving, guided by our students' own curiosity and not the strictures of a standard syllabus.</p>
           <p className="why-para fade-up delay-1" data-scroll>You will study in a truly <strong>interdisciplinary</strong> environment, where the possibilities of your learning journey are supported by our team's mixed and complementary backgrounds.</p>
 
-          <div className="butterfly" data-scroll data-scroll-speed="-3">
-            <div className="illustration-container" data-scroll>
+          <div className="butterfly illustration right" data-scroll data-scroll-speed="-3" data-scroll-offset="0,10%">
+            <div className="scale">
               <Image src={butterfly} />
             </div>
           </div>

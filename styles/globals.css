@@ -255,6 +255,10 @@ header {
   transform: translate(-50%, -50%);
 }
 
+#about {
+  padding: 100px 0 0;
+}
+
 .intro-text {
   padding-top: 350px
 }
@@ -264,29 +268,6 @@ header {
   font-family: 'Mrs Eaves Roman';
   letter-spacing: 3px;
   margin-bottom: 120px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-  transition: all 1.5s var(--color-ease) 0.5s;
-}
-
-.intro-text.in-view h1 {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.header-navigation {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-20px);
-  transition: all 1.5s var(--color-ease) 0.5s;
-}
-
-.header-navigation.in-view {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
 }
 
 nav {
@@ -436,16 +417,16 @@ nav {
 }
 
 .tutor-image {
-  max-width: 280px;
   margin: 0 auto;
 }
 
 .tutor-image img {
-  width: 300px;
-  height: 360px;
+  width: 272px;
+  height: 350px;
   object-fit: cover;
-  object-position: 0% 50%;
+  object-position: 50% 50%;
   filter: grayscale(1);
+  border: 2px solid #EAE5D250;
 }
 
 .tutor-about {
@@ -477,6 +458,8 @@ nav {
 
 .slider-nav {
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px 0;
 }
 
@@ -486,7 +469,7 @@ nav {
   margin: 12px 24px;
   font-family: 'Mrs Eaves Bold';
   font-size: 40px;
-  transition: all 0.6s var(--color-ease);
+  transition: color 0.6s var(--color-ease);
 }
 
 .slider-nav-item.active {
@@ -585,6 +568,10 @@ nav {
   bottom: 0;
 }
 
+#why {
+  padding: 100px 0;
+}
+
 .why-title {
   margin-bottom: 60px;
 }
@@ -630,13 +617,14 @@ nav {
   margin-bottom: 48px;
 }
 
-.illustration-container {
-  width: 60%;
+.illustration .scale {
   opacity: 0;
-  transition: all 0.6s linear 0.5s;
+  transform: scale(0.5);
+  transform-origin: top right;
+  transition: all 0.6s var(--color-ease) 0.6s;
 }
 
-.illustration-container.in-view {
-  width: 100%;
+.illustration.in-view .scale {
   opacity: 1;
+  transform: scale(1);
 }
