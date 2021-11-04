@@ -596,11 +596,18 @@ nav {
   line-height: 155%;
 }
 
+.butterfly {
+  width: 900px;
+  position: absolute;
+  top: -10%;
+  right: -15%;
+}
+
 .testimonial-card {
   position: relative;
   width: 100%;
   background: #EAE5D220;
-  padding: 120px 80px 80px;
+  padding: 120px 80px;
 }
 
 .testimonial-card:after {
