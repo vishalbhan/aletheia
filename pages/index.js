@@ -272,8 +272,10 @@ export default function Home() {
           <p className="why-para fade-up delay-1" data-scroll>Our tutoring service is <strong>bespoke</strong> and constantly evolving, guided by our students' own curiosity and not the strictures of a standard syllabus.</p>
           <p className="why-para fade-up delay-1" data-scroll>You will study in a truly <strong>interdisciplinary</strong> environment, where the possibilities of your learning journey are supported by our team's mixed and complementary backgrounds.</p>
 
-          <div className="butterfly" data-scroll data-scroll-speed="6">
-            <Image src={butterfly} />
+          <div className="butterfly" data-scroll data-scroll-speed="-3">
+            <div className="illustration-container" data-scroll>
+              <Image src={butterfly} />
+            </div>
           </div>
 
         </div>
