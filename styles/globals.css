@@ -295,19 +295,6 @@ nav {
   color: var(--dark-green)
 }
 
-/* .header-cta {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-  transition: all 0.8s var(--color-ease) 1s;
-}
-
-.header-cta.in-view {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-} */
-
 .hero-image-container {
   z-index: -1;
   position: absolute;
@@ -341,15 +328,16 @@ nav {
   opacity: 1;
 }
 
-.about-image {
+.nautilus {
   position: absolute;
   width: 1000px;
   left: 50%;
-  top: 20%;
+  top: 30%;
 }
 
 #services {
   margin-top: -200px;
+  padding: 100px 0 0;
   min-height: 80vh;
 }
 
@@ -395,11 +383,11 @@ nav {
   transition-delay: 0.3s;
 }
 
-.mushroom-1 {
+.bird-of-paradise {
   position: absolute;
-  bottom: -30%;
-  left: -30%;
-  width: 1000px;
+  bottom: -90%;
+  left: -30vw;
+  width: 60vw;
 }
 
 #tutors {
@@ -517,7 +505,7 @@ nav {
   margin-left: auto;
 }
 
-.mushroom-2 {
+.mushroom {
   width: 1000px;
   position: absolute;
   left: -20%;
@@ -561,7 +549,7 @@ nav {
   margin-left: auto;
 }
 
-.seahorse-left-image {
+.seahorse-left {
   width: 420px;
   position: absolute;
   left: 5%;
@@ -617,14 +605,33 @@ nav {
   margin-bottom: 48px;
 }
 
+.illustration.right {
+  transform-origin: top right;
+}
+
+.illustration.left {
+  transform-origin: top left;
+}
+
 .illustration .scale {
   opacity: 0;
   transform: scale(0.5);
-  transform-origin: top right;
-  transition: all 0.6s var(--color-ease) 0.6s;
+  transition: all 0.9s var(--color-ease) 0.6s;
 }
 
 .illustration.in-view .scale {
   opacity: 1;
   transform: scale(1);
+}
+
+/***
+Mobile
+*********************************************************************************************************/
+
+@media screen and (max-width: 768px) {
+  
+  p {
+
+  }
+
 }

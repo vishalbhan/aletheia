@@ -5,6 +5,7 @@ import { useLocomotiveScroll } from 'react-locomotive-scroll'
 import shell from '../public/images/shell.png'
 import nautilus from '../public/images/nautilus.png'
 import mushroom from '../public/images/mushrooms.png'
+import birdofparadise from '../public/images/birdofparadise.png'
 import LogoTree from '@components/LogoTree'
 import octopus from '../public/images/octopus.png'
 import seahorseright from '../public/images/seahorseright.png'
@@ -92,8 +93,10 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="about-image" data-scroll data-scroll-speed="6">
-          <Image src={nautilus} />
+        <div className="nautilus illustration right" data-scroll data-scroll-speed="5" data-scroll-offset="0,10%">
+          <div className="scale">
+            <Image src={nautilus} />
+          </div>
         </div>
 
       </section>
@@ -133,8 +136,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mushroom-1" data-scroll data-scroll-speed="5">
-          <Image src={mushroom} />
+        <div className="bird-of-paradise illustration left" data-scroll data-scroll-speed="4" data-scroll-offset="0,10%">
+          <div className="scale">
+            <Image src={birdofparadise} />
+          </div>
         </div>
       </section>
 
@@ -161,8 +166,10 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="octopus" data-scroll data-scroll-speed="-2">
-              <Image src={octopus} />
+            <div className="octopus illustration right" data-scroll data-scroll-speed="-2" data-scroll-offset="0,10%">
+              <div className="scale">
+                <Image src={octopus} />
+              </div>
             </div>
 
           </div>
@@ -198,9 +205,12 @@ export default function Home() {
 
           </div>
 
-          <div className="mushroom-2" data-scroll data-scroll-speed="3">
-            <Image src={mushroom} />
+          <div className="mushroom illustration left" data-scroll data-scroll-speed="3" data-scroll-offset="0,10%">
+            <div className="scale">
+              <Image src={mushroom} />
+            </div>
           </div>
+
         </section>
 
         <section id="process" className="text-left text-dark" data-scroll>
@@ -235,8 +245,10 @@ export default function Home() {
 
           </div>
 
-          <div className="pineapple" data-scroll data-scroll-speed="7">
-            <Image src={pineapple} />
+          <div className="pineapple illustration right" data-scroll data-scroll-speed="7" data-scroll-offset="0,10%">
+            <div className="scale">
+              <Image src={pineapple} />
+            </div>
           </div>
         </section>
 
@@ -255,8 +267,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="seahorse-left-image" data-scroll data-scroll-speed="6">
-              <Image src={seahorseleft} />
+            <div className="seahorse-left illustration left" data-scroll data-scroll-speed="6" data-scroll-offset="0,10%">
+              <div className="scale">
+                <Image src={seahorseleft} />
+              </div>
             </div>
 
         </div>
