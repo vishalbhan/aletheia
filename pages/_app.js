@@ -54,6 +54,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Aletheia | Advanced Private Tuition</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <LocomotiveScrollProvider
         options={
