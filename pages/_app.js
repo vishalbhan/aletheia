@@ -60,7 +60,13 @@ function MyApp({ Component, pageProps }) {
         options={
           {
             smooth: true,
-            class: "in-view"
+            class: "in-view",
+            smartphone: {
+              smooth: true
+            },
+            tablet: {
+                smooth: true
+            }
           }
         }
         watch={

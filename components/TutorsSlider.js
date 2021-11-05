@@ -90,7 +90,7 @@ export default function TutorsSlider() {
                 <div className="slider-nav-items">
                     {
                         tutors.map((tutor, index) => (
-                        <div className={`slider-nav-item ${index === activeSlideIndex ? 'active' : ''}`} onClick={() => goToSlide(index)}>
+                        <div className={`slider-nav-item ${index === activeSlideIndex ? 'active' : ''}`} onClick={() => goToSlide(index)} key={`tut-${index}`}>
                             {index + 1}
                         </div>
                         ))

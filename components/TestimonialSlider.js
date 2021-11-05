@@ -79,7 +79,7 @@ export default function TestimonialSlider() {
                 <div className="slider-nav-items">
                     {
                         testimonials.map((item, index) => (
-                        <div className={`slider-nav-item ${index === activeSlideIndex ? 'active' : ''}`} onClick={() => goToSlide(index)}>
+                        <div className={`slider-nav-item ${index === activeSlideIndex ? 'active' : ''}`} onClick={() => goToSlide(index)}  key={`tes-${index}`}>
                             {index + 1}
                         </div>
                         ))
