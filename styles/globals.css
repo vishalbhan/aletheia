@@ -248,6 +248,7 @@ header {
 }
 
 .hero-content {
+  z-index: 1;
   position: absolute;
   width: 100%;
   top: 40%;
@@ -296,7 +297,7 @@ nav {
 }
 
 .hero-image-container {
-  z-index: -1;
+  /* z-index: ; */
   position: absolute;
   top: 120px;
   left: 50%;
@@ -386,7 +387,7 @@ nav {
 .bird-of-paradise {
   position: absolute;
   bottom: -90%;
-  left: -30vw;
+  left: -20vw;
   width: 60vw;
 }
 
@@ -397,6 +398,9 @@ nav {
 .tutors-slider-card {
   width: 100%;
   background: #EAE5D220;
+}
+
+.tutors-card-content {
   padding: 40px 80px;
   display: grid;
   grid-template-columns: 1fr 1.3fr;
@@ -446,9 +450,26 @@ nav {
 
 .slider-nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+}
+
+.slider-nav-prev,
+.slider-nav-next {
+  cursor: pointer;
+  font-size: 32px;
+  padding: 12px;
+  transition: all 0.6s var(--color-ease);
+}
+
+.slider-nav-prev:hover,
+.slider-nav-next:hover {
+  color: var(--golden);
+}
+
+.slider-nav-items {
+  display: flex;
 }
 
 .slider-nav-item {
@@ -628,10 +649,173 @@ nav {
 Mobile
 *********************************************************************************************************/
 
-@media screen and (max-width: 768px) {
-  
-  p {
+.mobile-services {
+  display: none;
+}
 
+@media screen and (max-width: 768px) {
+
+  .container {
+    width: 100vw;
+    padding: 0 24px;
+  }
+
+  header {
+    padding: 0 24px;
+  }
+
+  .header-logo {
+    width: 90px;
+  }
+
+  .header-navigation {
+    display: none;
+  }
+
+  .hero-inage-container {
+    top: 150px;
+  }
+
+  .hero-image {
+    width: 240px;
+  }
+
+  .hero-image.in-view {
+    width: 360px;
+  }
+
+  .illustration {
+    width: 125%;
+  }
+
+  .illustration.left {
+    left: -45%;
+  }
+
+  .illustration.right {
+    right: -45%;
+  }
+
+  h1,
+  .intro-text h1 {
+    font-size: 26px;
+  }
+  
+  p,
+  p.large {
+    font-size: 18px;
+  }
+
+  .about-text {
+    padding: 0;
+    font-size: 22px;
+  }
+
+  .desktop-services {
+    display: none
+  }
+
+  .mobile-services {
+    display: block;
+    margin-bottom: 100px;
+  }
+
+  .mobile-service-item {
+    margin-bottom: 50px;
+  }
+
+  .mobile-service-item h2 {
+    font-size: 22px;
+  }
+
+  .services-item p {
+    margin-bottom: 20px;
+  }
+
+  #tutors {
+    text-align: left;
+  }
+
+  .tutors-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    grid-gap: 12px;
+  }
+
+  .tutor-image {
+    margin: 0;
+    order: 1
+  }
+
+  .tutor-image img {
+    width: 160px;
+    height: 190px;
+  }
+
+  .tutor-about-container {
+    order: 3;
+  }
+
+  .tutor-about {
+    min-height: 0;
+    margin-bottom: 12px;
+  }
+
+  .tutor-about p {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .tutor-details {
+    order: 2;
+  }
+
+  .tutor-name {
+    color: #Fff;
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .tutor-qualification {
+    color: #Fff;
+    font-size: 16px;
+  }
+
+  .slider-nav-items {
+    display: none;
+  }
+
+  .octopus {
+    top: -20%;
+  }
+
+  .quote-1-container {
+    max-width: 100%;
+  }
+
+  .quote {
+    font-size: 64px;
+  }
+
+  .process-item {
+    grid-template-columns: 50px 1fr;
+    align-items: flex-start;
+  }
+
+  .process-number {
+    font-size: 40px;
+    padding: 0;
+    margin-top: 6px;
+  }
+
+  .process-text {
+    margin-right: 0;
+  }
+
+  .pineapple {
+    width: 90%;
   }
 
 }

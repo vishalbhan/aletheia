@@ -3,6 +3,8 @@ import Image from 'next/image'
 import athamos from '../public/images/athamos.png'
 import kalle from '../public/images/kalle.png'
 import lee from '../public/images/lee.png'
+import { BsArrowRight, BsArrowLeft } from 'react-icons/bs'
+import gsap from 'gsap/dist/gsap'
 
 export default function TutorsSlider() {
     const [activeSlide, setActiveSlide] = useState({})
@@ -40,34 +42,61 @@ export default function TutorsSlider() {
     }, [])
 
     const goToSlide = (number) => {
-        setActiveSlide(tutors[number])
-        setActiveSlideIndex(number)
+        const tl = gsap.timeline({})
+        tl.to('.tutors-card-content', { duration: 0.6, opacity: 0, ease: 'cubic-bezier(.55,0,.1,1)' })
+        setTimeout(() => {
+            setActiveSlide(tutors[number])
+            setActiveSlideIndex(number)
+        }, 600)
+        tl.to('.tutors-card-content', { duration: 0.6, opacity: 1, ease: 'cubic-bezier(.55,0,.1,1)' })
+    }
+
+    const prevSlide = () => {
+        if (activeSlideIndex === 0) {
+            goToSlide(tutors.length - 1)
+        } else {
+            goToSlide(activeSlideIndex - 1)
+        }
+    }
+
+    const nextSlide = () => {
+        if (tutors.length - 1 === activeSlideIndex) {
+            goToSlide(0)
+        } else {
+            goToSlide(activeSlideIndex + 1)
+        }
     }
 
     return (
         <div className="tutors-slider-container fade-up" data-scroll>
             <div className="tutors-slider-card">
-                <div className="tutor-image">
-                    <img src={`/images/${activeSlide.imgName}.png`} />
-                </div>
-                <div className="tutor-about-container">
-                    <div className="tutor-about text-left">
-                        <p>{activeSlide.about}</p>
+                <div className="tutors-card-content">
+                    <div className="tutor-image">
+                        <img src={`/images/${activeSlide?.imgName}.png`} />
                     </div>
-                </div>
-                <div className="tutor-details">
-                    <div className="tutor-name">{activeSlide.name}</div>
-                    <div className="tutor-qualification"><em>{activeSlide.qualification}</em></div>
+                    <div className="tutor-about-container">
+                        <div className="tutor-about text-left">
+                            <p>{activeSlide?.about}</p>
+                        </div>
+                    </div>
+                    <div className="tutor-details">
+                        <div className="tutor-name">{activeSlide?.name}</div>
+                        <div className="tutor-qualification"><em>{activeSlide?.qualification}</em></div>
+                    </div>
                 </div>
             </div>
             <div className="slider-nav">
-                {
-                    tutors.map((tutor, index) => (
-                    <div className={`slider-nav-item ${index === activeSlideIndex ? 'active' : ''}`} onClick={() => goToSlide(index)}>
-                        {index + 1}
-                    </div>
-                    ))
-                }
+                <div className="slider-nav-prev" onClick={() => prevSlide()}><BsArrowLeft /></div>
+                <div className="slider-nav-items">
+                    {
+                        tutors.map((tutor, index) => (
+                        <div className={`slider-nav-item ${index === activeSlideIndex ? 'active' : ''}`} onClick={() => goToSlide(index)}>
+                            {index + 1}
+                        </div>
+                        ))
+                    }
+                </div>
+                <div className="slider-nav-next" onClick={() => nextSlide()}><BsArrowRight /></div>
             </div>
         </div>
     )

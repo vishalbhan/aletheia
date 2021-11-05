@@ -76,64 +76,99 @@ export default function Home() {
             </nav>
           </div>
         </div>
+
         <div className="hero-image-container" data-scroll>
           <div className="hero-image" data-scroll data-scroll-speed="5">
             <Image src={shell} />
           </div>
         </div>
+
       </section>
 
       <section id="about">
-        
-        <div data-scroll data-scroll-speed="3">
-          <p className="about-text large" data-scroll>
-            Aletheia is a highly selective community of doctoral-level educators, providing our students with a unique space in which academic research and tuition flourish symbiotically.
-            <br /><br />
-            Entwining our roots in the Oxbridge collegiate system with over a decade of tuition experience worldwide, we deliver a university environment for all students regardless of age.
-          </p>
-        </div>
+        <div className="container">
 
-        <div className="nautilus illustration right" data-scroll data-scroll-speed="5" data-scroll-offset="0,10%">
-          <div className="scale">
-            <Image src={nautilus} />
+          <div data-scroll data-scroll-speed="3">
+            <p className="about-text large" data-scroll>
+              Aletheia is a highly selective community of doctoral-level educators, providing our students with a unique space in which academic research and tuition flourish symbiotically.
+              <br /><br />
+              Entwining our roots in the Oxbridge collegiate system with over a decade of tuition experience worldwide, we deliver a university environment for all students regardless of age.
+            </p>
           </div>
-        </div>
 
+          <div className="nautilus illustration right" data-scroll data-scroll-speed="5" data-scroll-offset="0,10%">
+            <div className="scale">
+              <Image src={nautilus} />
+            </div>
+          </div>
+
+        </div>
       </section>
 
       <section id="services" className="text-left" data-scroll data-scroll-speed="2">
         <div className="container">
 
-          <div className="overflow-hidden">
+          <div className="desktop-services">
+            <div className="overflow-hidden">
+              <h1 data-scroll className="fade-up">Our Services</h1>
+            </div>
+
+            <div className="line" data-scroll></div>
+            
+            <div className="services-header text-center">
+              <div className="overflow-hidden grid-3">
+                <h2 data-scroll>School<br/>Tuition</h2>
+                <h2 data-scroll>University<br/>Tuition</h2>
+                <h2 data-scroll>Mentoring &amp;<br/>Advice</h2>
+              </div>
+            </div>
+
+            <div className="line" data-scroll></div>
+
+            <div className="services-items text-center grid-3" data-scroll>
+              <div className="services-item fade-up" data-scroll>
+                <p>lower school (up to 16)</p>
+                <p>upper school (16+)</p>
+              </div>
+              <div className="services-item fade-up" data-scroll>
+                <p>undergraduate</p>
+                <p>postgraduate</p>
+              </div>
+              <div className="services-item fade-up" data-scroll>
+                <p>university applications</p>
+                <p>careers advice</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mobile-services">
             <h1 data-scroll className="fade-up">Our Services</h1>
-          </div>
-
-          <div className="line" data-scroll></div>
-          
-          <div className="services-header text-center">
-            <div className="overflow-hidden grid-3">
-              <h2 data-scroll>School<br/>Tuition</h2>
-              <h2 data-scroll>University<br/>Tuition</h2>
-              <h2 data-scroll>Mentoring &amp;<br/>Advice</h2>
+            <div className="mobile-service-item">
+              <h2 data-scroll>School Tuition</h2>
+              <div className="line" data-scroll></div>
+              <div className="services-item fade-up" data-scroll>
+                <p>lower school (up to 16)</p>
+                <p>upper school (16+)</p>
+              </div>
+            </div>
+            <div className="mobile-service-item">
+              <h2 data-scroll>University Tuition</h2>
+              <div className="line" data-scroll></div>
+              <div className="services-item fade-up" data-scroll>
+                <p>undergraduate</p>
+                <p>postgraduate</p>
+              </div>
+            </div>
+            <div className="mobile-service-item">
+              <h2 data-scroll>Mentoring &amp; Advice</h2>
+              <div className="line" data-scroll></div>
+              <div className="services-item fade-up" data-scroll>
+                <p>university applications</p>
+                <p>careers advice</p>
+              </div>
             </div>
           </div>
 
-          <div className="line" data-scroll></div>
-
-          <div className="services-items text-center grid-3" data-scroll>
-            <div className="services-item fade-up" data-scroll>
-              <p>lower school (up to 16)</p>
-              <p>upper school (16+)</p>
-            </div>
-            <div className="services-item fade-up" data-scroll>
-              <p>undergraduate</p>
-              <p>postgraduate</p>
-            </div>
-            <div className="services-item fade-up" data-scroll>
-              <p>university applications</p>
-              <p>careers advice</p>
-            </div>
-          </div>
         </div>
 
         <div className="bird-of-paradise illustration left" data-scroll data-scroll-speed="4" data-scroll-offset="0,10%">
@@ -183,7 +218,7 @@ export default function Home() {
                 <div className="quote-logo"><LogoTree /></div>
               </div>
               <div className="quote qoute-1-text">
-                To teach is to create a space in which obedience to truth is practiced.<br/>
+                "To teach is to create a space in which obedience to truth is practiced."<br/>
                 — Parker Palmer
               </div>
             </div>
