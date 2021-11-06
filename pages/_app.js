@@ -66,8 +66,7 @@ function MyApp({ Component, pageProps }) {
             },
             tablet: {
                 smooth: true
-            },
-            touchMultipler: 6,
+            }
           }
         }
         watch={

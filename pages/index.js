@@ -21,6 +21,7 @@ export default function Home() {
   useEffect(() => {
     if (scroll) {
       scroll.on('call', (obj) => {
+        console.log(scroll)
         if (obj === 'cream-section') {
           if (document.querySelector('body').classList.contains('bg-dark')) {
             document.querySelector('body').classList.remove('bg-dark')

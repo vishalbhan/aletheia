@@ -433,7 +433,8 @@ nav {
   font-family: 'Mrs Eaves Roman';
   font-size: 24px;
   text-transform: uppercase;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  letter-spacing: 3px;
 }
 
 .tutor-qualification {
@@ -567,7 +568,7 @@ nav {
   width: 420px;
   position: absolute;
   left: 5%;
-  bottom: 0;
+  bottom: 60%;
 }
 
 #why {
