@@ -83,6 +83,8 @@ export default function Home() {
           </div>
         </div>
 
+        <p className="mobile-hero-cta"><em>scroll down</em></p>
+
       </section>
 
       <section id="about">
@@ -96,7 +98,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="nautilus illustration right" data-scroll data-scroll-speed="5" data-scroll-offset="0,10%">
+          <div className="nautilus illustration right" data-scroll data-scroll-speed="6" data-scroll-offset="0,10%">
             <div className="scale">
               <Image src={nautilus} />
             </div>
@@ -296,7 +298,7 @@ export default function Home() {
               <div className="quote-logo-container">
                 <div className="quote-logo"><LogoTree /></div>
               </div>
-              <div className="quote qoute-2-text">
+              <div className="quote quote-2-text">
               “Man is all symmetrie, Full of proportions, one limbe to another, And all to all the world besides: Each part may call the farthest, brother: For head with foot hath private amitie, And both with moons and tides.”<br/>
               - George Herbert, The Temple
               </div>

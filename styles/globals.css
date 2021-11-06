@@ -34,7 +34,7 @@
   --dark-green: #122223;
   --golden: #DA9E63;
   --cream: #EAE5D2;
-  --color-ease: cubic-bezier(.55,0,.1,1);
+  --ease: cubic-bezier(.55,0,.1,1);
 }
 
 main {
@@ -231,14 +231,14 @@ section {
 }
 
 header {
-  z-index: 2;
+  z-index: 10;
   position: absolute;
   width: 100vw;
   top: 0;
   left: 0;
   display: grid;
   place-items: center;
-  padding: 40px;
+  padding: 20px;
 }
 
 .header-logo {
@@ -251,17 +251,13 @@ header {
   z-index: 1;
   position: absolute;
   width: 100%;
-  top: 40%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 #about {
   padding: 100px 0 0;
-}
-
-.intro-text {
-  padding-top: 350px
 }
 
 .intro-text h1 {
@@ -297,9 +293,8 @@ nav {
 }
 
 .hero-image-container {
-  /* z-index: ; */
   position: absolute;
-  top: 120px;
+  top: 100px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -307,14 +302,12 @@ nav {
 .hero-image {
   width: 480px;
   opacity: 0;
-  visibility: hidden;
-  transition: width 1.5s var(--color-ease), opacity 1.5s linear;
+  transition: width 1.5s var(--ease), opacity 1.5s linear;
 }
 
 .hero-image.in-view {
-  width: 520px;
+  width: 600px;
   opacity: 1;
-  visibility: visible;
 }
 
 .about-text {
@@ -386,7 +379,7 @@ nav {
 
 .bird-of-paradise {
   position: absolute;
-  bottom: -90%;
+  bottom: -75%;
   left: -20vw;
   width: 60vw;
 }
@@ -460,7 +453,7 @@ nav {
   cursor: pointer;
   font-size: 32px;
   padding: 12px;
-  transition: all 0.6s var(--color-ease);
+  transition: all 0.6s var(--ease);
 }
 
 .slider-nav-prev:hover,
@@ -478,7 +471,7 @@ nav {
   margin: 12px 24px;
   font-family: 'Mrs Eaves Bold';
   font-size: 40px;
-  transition: color 0.6s var(--color-ease);
+  transition: color 0.6s var(--ease);
 }
 
 .slider-nav-item.active {
@@ -530,7 +523,7 @@ nav {
   width: 1000px;
   position: absolute;
   left: -20%;
-  bottom: -10%;
+  bottom: -20%;
 }
 
 #process {
@@ -627,17 +620,17 @@ nav {
 }
 
 .illustration.right {
-  transform-origin: top right;
+  transform-origin: bottom right;
 }
 
 .illustration.left {
-  transform-origin: top left;
+  transform-origin: bottom left;
 }
 
 .illustration .scale {
   opacity: 0;
   transform: scale(0.5);
-  transition: all 0.9s var(--color-ease) 0.6s;
+  transition: all 0.9s var(--ease) 0.6s;
 }
 
 .illustration.in-view .scale {
@@ -648,6 +641,10 @@ nav {
 /***
 Mobile
 *********************************************************************************************************/
+
+.mobile-hero-cta {
+  display: none;
+}
 
 .mobile-services {
   display: none;
@@ -684,21 +681,36 @@ Mobile
     width: 360px;
   }
 
+  .mobile-hero-cta {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 32px;
+    opacity: 0.5;
+    animation: blink 4s linear infinite;
+  }
+
+  @keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
   .illustration {
     width: 125%;
   }
 
-  .illustration.left {
-    left: -45%;
+  h1 {
+    font-size: 22px;
   }
 
-  .illustration.right {
-    right: -45%;
+  .hero-content {
+    top: 50%;
   }
 
-  h1,
   .intro-text h1 {
     font-size: 26px;
+    margin: 0;
   }
   
   p,
@@ -706,9 +718,18 @@ Mobile
     font-size: 18px;
   }
 
+  #about {
+    min-height: 90vh;
+  }
+
   .about-text {
     padding: 0;
     font-size: 22px;
+  }
+
+  .nautilus {
+    width: 180%;
+    left: 15%;
   }
 
   .desktop-services {
@@ -732,8 +753,15 @@ Mobile
     margin-bottom: 20px;
   }
 
+  .bird-of-paradise {
+    width: 110%;
+    left: -5%;
+    bottom: -62%;
+  }
+
   #tutors {
     text-align: left;
+    margin-bottom: 300px;
   }
 
   .tutors-card-content {
@@ -775,7 +803,7 @@ Mobile
   .tutor-name {
     color: #Fff;
     font-size: 20px;
-    margin-bottom: 12px;
+    margin-bottom: 4px;
   }
 
   .tutor-qualification {
@@ -788,7 +816,12 @@ Mobile
   }
 
   .octopus {
+    right: -45%;
     top: -20%;
+  }
+
+  #quote-1 {
+    padding: 0;
   }
 
   .quote-1-container {
@@ -799,23 +832,74 @@ Mobile
     font-size: 64px;
   }
 
+  .mushroom {
+    left: -45%;
+  }
+
   .process-item {
-    grid-template-columns: 50px 1fr;
+    grid-template-columns: 32px 1fr;
     align-items: flex-start;
   }
 
   .process-number {
-    font-size: 40px;
+    font-size: 32px;
     padding: 0;
-    margin-top: 6px;
   }
 
   .process-text {
-    margin-right: 0;
+    padding: 0;
+    margin: 0;
   }
 
   .pineapple {
-    width: 90%;
+    width: 75%;
+    right: -36%;
+    bottom: 25%;
+  }
+
+  .quote-2-text {
+    font-size: 52px;
+  }
+
+  .seahorse-left {
+    width: 50%;
+    left: 0%;
+    top: -32%;
+  }
+
+  .cream-section {
+    padding-bottom: 200px;
+  }
+
+  .why-title {
+    margin-bottom: 36px;
+  }
+
+  .why-para {
+    margin-bottom: 36px;
+    font-size: 20px;
+  }
+
+  .butterfly {
+    right: -62%;
+  }
+
+  .testimonial-card {
+    padding: 20px;
+  }
+  
+  .testimonial-card:after {
+    top: 12px;
+    left: 12px;
+    bottom: 12px;
+    right: 12px;
+  }
+  
+  .testimonial {
+    width: 100%;
+    margin: 0 auto;
+    font-style: italic;
+    margin-bottom: 24px;
   }
 
 }

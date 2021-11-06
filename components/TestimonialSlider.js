@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { BsArrowRight, BsArrowLeft } from 'react-icons/bs'
+import gsap from 'gsap/dist/gsap'
 
 export default function TestimonialSlider() {
     const [activeSlide, setActiveSlide] = useState({})
