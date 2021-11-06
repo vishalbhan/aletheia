@@ -68,10 +68,10 @@ export default function TestimonialSlider() {
             <div className="testimonial-card">
                 <div className="testimonial-card-content">
                     <div className="testimonial">
-                        <p>{activeSlide.testimonial}</p>
+                        <p>{activeSlide?.testimonial}</p>
                     </div>
                     <div className="student-name">
-                        <p className="font-weight-bold">{activeSlide.student}</p>
+                        <p className="font-weight-bold">{activeSlide?.student}</p>
                     </div>
                 </div>
             </div>

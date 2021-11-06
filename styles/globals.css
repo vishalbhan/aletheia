@@ -27,7 +27,7 @@
 
 @font-face {
   font-family: 'Retro Signature';
-  src: url('./fonts/RetroSignature.otf') format('otf');
+  src: url('./fonts/RetroSignature.ttf') format('ttf');
 }
 
 :root {
@@ -670,7 +670,7 @@ Mobile
   }
 
   .hero-inage-container {
-    top: 150px;
+    top: 180px;
   }
 
   .hero-image {
@@ -685,14 +685,13 @@ Mobile
     display: block;
     position: absolute;
     width: 100%;
-    bottom: 32px;
-    opacity: 0.5;
+    bottom: 120px;
     animation: blink 4s linear infinite;
   }
 
   @keyframes blink {
     0% { opacity: 0; }
-    50% { opacity: 1; }
+    50% { opacity: 0.5; }
     100% { opacity: 0; }
   }
 
@@ -705,7 +704,7 @@ Mobile
   }
 
   .hero-content {
-    top: 50%;
+    top: 40%;
   }
 
   .intro-text h1 {
@@ -730,6 +729,7 @@ Mobile
   .nautilus {
     width: 180%;
     left: 15%;
+    top: 20%;
   }
 
   .desktop-services {
@@ -761,7 +761,7 @@ Mobile
 
   #tutors {
     text-align: left;
-    margin-bottom: 300px;
+    margin-bottom: 150px;
   }
 
   .tutors-card-content {
@@ -885,7 +885,7 @@ Mobile
   }
 
   .testimonial-card {
-    padding: 20px;
+    padding: 60px 42px;
   }
   
   .testimonial-card:after {
@@ -897,9 +897,15 @@ Mobile
   
   .testimonial {
     width: 100%;
-    margin: 0 auto;
-    font-style: italic;
-    margin-bottom: 24px;
+    margin-bottom: 48px;
+  }
+
+  .testimonial p {
+    font-size: 15px;
+  }
+
+  .student-name p {
+    font-size: 15px;
   }
 
 }
