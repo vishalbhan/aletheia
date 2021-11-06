@@ -62,7 +62,7 @@ function MyApp({ Component, pageProps }) {
             smooth: true,
             class: "in-view",
             smartphone: {
-              smooth: true
+              smooth: false
             },
             tablet: {
                 smooth: true
