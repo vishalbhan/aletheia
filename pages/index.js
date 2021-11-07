@@ -14,6 +14,7 @@ import pineapple from '../public/images/pineapple.png'
 import butterfly from '../public/images/butterfly.png'
 import TutorsSlider from '@components/TutorsSlider'
 import TestimonialSlider from '@components/TestimonialSlider'
+import EnquiryForm from '@components/EnquiryForm'
 
 export default function Home() {
   const { scroll } = useLocomotiveScroll()
@@ -344,68 +345,7 @@ export default function Home() {
           <h1 className="fade-up" data-scroll>Make an Enquiry</h1>
 
           <div className="enquiry-form-container">
-            <form id="enquiryForm" name="enquiry-form" method="POST" data-netlify="true">
-
-              <div className="input-group">
-                <label htmlFor="parent-name">Name of Parent/Guardian</label>
-                <input type="text" id="parent-name" name="parent-name" />
-              </div>
-
-              <div className="input-group">
-                <label htmlFor="parent-email">Parent/Guardian Email Address</label>
-                <input type="email" id="parent-email" name="parent-email" />
-              </div>
-
-              <div className="input-group">
-                <label htmlFor="student-name">Name of Student</label>
-                <input type="text" id="student-name" name="student-name" />
-              </div>
-
-              <div className="input-group">
-                <label htmlFor="current-curriculum">Current Curriculum</label>
-                <input type="text" id="current-curriculum" name="current-curriculum" placeholder="e.g. IB MYP, GCSE, IB Diploma, A-Level, etc." />
-              </div>
-
-              <div className="input-group">
-                <label>Service Required</label>
-                <div className="radio-container">
-                  <div className="radio-group">
-                    <input className="radio-input" type="radio" id="mid-year" name="service-required" value="Mid-Year" />
-                    <label className="radio-label" tabIndex="0" htmlFor="mid-year">Mid-Year</label>
-                  </div>
-                  <div className="radio-group">
-                    <input className="radio-input" type="radio" id="6th-form" name="service-required" value="6th Form" />
-                    <label className="radio-label" tabIndex="0" htmlFor="6th-form">6th Form</label>
-                  </div>
-                  <div className="radio-group">
-                    <input className="radio-input" type="radio" id="undergraduate" name="service-required" value="Undergraduate" />
-                    <label className="radio-label" tabIndex="0" htmlFor="undergraduate">Undergraduate</label>
-                  </div>
-                  <div className="radio-group">
-                    <input className="radio-input" type="radio" id="graduate" name="service-required" value="Graduate" />
-                    <label className="radio-label" tabIndex="0" htmlFor="graduate">Graduate</label>
-                  </div>
-                  <div className="radio-group">
-                    <input className="radio-input" type="radio" id="university-advice" name="service-required" value="University Advice" />
-                    <label className="radio-label" tabIndex="0" htmlFor="university-advice">University Advice</label>
-                  </div>
-                  <div className="radio-group">
-                    <input className="radio-input" type="radio" id="careers-advice" name="service-required" value="Careers Advice" />
-                    <label className="radio-label" tabIndex="0" htmlFor="careers-advice">Careers Advice</label>
-                  </div>
-                </div>
-              </div>
-
-              <div className="input-group">
-                <label htmlFor="message">Message</label>
-                <textarea id="message" name="message" rows="4" />
-              </div>
-
-              <div className="text-center span-2">
-                <input type="submit" value="Send Enquiry" />
-              </div>
-
-            </form>
+            <EnquiryForm />
           </div>
 
         </div>
