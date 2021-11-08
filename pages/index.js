@@ -8,7 +8,8 @@ import mushroom from '../public/images/mushrooms.png'
 import birdofparadise from '../public/images/birdofparadise.png'
 import LogoTree from '@components/LogoTree'
 import octopus from '../public/images/octopus.png'
-import seahorseright from '../public/images/seahorseright.png'
+import quote1 from '../public/images/quote-1.png'
+import quote2 from '../public/images/quote-2.png'
 import seahorseleft from '../public/images/seahorseleft.png'
 import pineapple from '../public/images/pineapple.png'
 import butterfly from '../public/images/butterfly.png'
@@ -81,7 +82,7 @@ export default function Home() {
 
         <div className="hero-image-container" data-scroll>
           <div className="hero-image" data-scroll data-scroll-speed="5">
-            <Image src={shell} />
+            <Image src={shell} priority />
           </div>
         </div>
 
@@ -102,7 +103,7 @@ export default function Home() {
 
           <div className="nautilus illustration right" data-scroll data-scroll-speed="6" data-scroll-offset="0,10%">
             <div className="scale">
-              <Image src={nautilus} />
+              <Image src={nautilus} priority />
             </div>
           </div>
 
@@ -177,7 +178,7 @@ export default function Home() {
 
         <div className="bird-of-paradise illustration left" data-scroll data-scroll-speed="4" data-scroll-offset="0,10%">
           <div className="scale">
-            <Image src={birdofparadise} />
+            <Image src={birdofparadise} priority />
           </div>
         </div>
       </section>
@@ -207,7 +208,7 @@ export default function Home() {
 
             <div className="octopus illustration right" data-scroll data-scroll-speed="-2" data-scroll-offset="0,10%">
               <div className="scale">
-                <Image src={octopus} />
+                <Image src={octopus} priority />
               </div>
             </div>
 
@@ -221,10 +222,11 @@ export default function Home() {
               <div className="quote-logo-container">
                 <div className="quote-logo"><LogoTree /></div>
               </div>
-              <div className="quote qoute-1-text">
+              {/* <div className="quote qoute-1-text">
                 "To teach is to create a space in which obedience to truth is practiced."<br/>
                 — Parker Palmer
-              </div>
+              </div> */}
+              <Image src={quote1} />
             </div>
 
           </div>
@@ -246,7 +248,7 @@ export default function Home() {
 
           <div className="mushroom illustration left" data-scroll data-scroll-speed="3" data-scroll-offset="0,10%">
             <div className="scale">
-              <Image src={mushroom} />
+              <Image src={mushroom} priority />
             </div>
           </div>
 
@@ -286,7 +288,7 @@ export default function Home() {
 
           <div className="pineapple illustration right" data-scroll data-scroll-speed="7" data-scroll-offset="0,10%">
             <div className="scale">
-              <Image src={pineapple} />
+              <Image src={pineapple} priority />
             </div>
           </div>
         </section>
@@ -300,15 +302,16 @@ export default function Home() {
               <div className="quote-logo-container">
                 <div className="quote-logo"><LogoTree /></div>
               </div>
-              <div className="quote quote-2-text">
+              {/* <div className="quote quote-2-text">
               “Man is all symmetrie, Full of proportions, one limbe to another, And all to all the world besides: Each part may call the farthest, brother: For head with foot hath private amitie, And both with moons and tides.”<br/>
               - George Herbert, The Temple
-              </div>
+              </div> */}
+              <Image src={quote2} />
             </div>
 
             <div className="seahorse-left illustration left" data-scroll data-scroll-speed="6" data-scroll-offset="0,10%">
               <div className="scale">
-                <Image src={seahorseleft} />
+                <Image src={seahorseleft} priority />
               </div>
             </div>
 
@@ -325,7 +328,7 @@ export default function Home() {
 
           <div className="butterfly illustration right" data-scroll data-scroll-speed="-4" data-scroll-offset="0,10%">
             <div className="scale">
-              <Image src={butterfly} />
+              <Image src={butterfly} priority />
             </div>
           </div>
 

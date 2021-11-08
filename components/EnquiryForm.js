@@ -18,8 +18,8 @@ export default function EnquiryForm() {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: new URLSearchParams(formData).toString()
         })
-            .then(() => setFormStatus('sent'))
-            .catch((error) => alert(error))
+        .then(() => setFormStatus('sent'))
+        .catch((error) => alert(error))
     }
 
     return (
@@ -85,7 +85,7 @@ export default function EnquiryForm() {
                     formStatus === 'sent' ? (
                         <p>Enquiry sent, we'll be in touch soon!</p>
                     ) : (
-                        <input type="submit" value="Send Enquiry" />
+                        <button>Send Enquiry</button>
                     )
                 }
             </div>

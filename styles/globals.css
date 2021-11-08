@@ -669,12 +669,13 @@ input {
   width: 100%;
   background: none;
   border: none;
-  border-bottom: 1px solid var(--golden);
+  border-bottom: 1px solid #DA9E6350;
   padding: 10px 0;
   color: var(--cream);
   font-family: 'Palantino';
   font-size: 18px;
   letter-spacing: 1px;
+  transition: all 0.15s ease;
 }
 
 input::placeholder {
@@ -685,7 +686,7 @@ textarea {
   width: 100%;
   background: none;
   border: none;
-  border: 1px solid var(--golden);
+  border: 1px solid #DA9E6350;
   font-family: 'Palantino';
   font-size: 18px;
   letter-spacing: 1px;
@@ -693,11 +694,20 @@ textarea {
   padding: 12px;
   color: var(--cream);
   resize: none;
+  transition: all 0.15s ease;
 }
 
 input:focus-visible,
 textarea:focus-visible {
   outline: none;
+}
+
+input:focus-visible {
+  border-bottom: 1px solid #DA9E63;
+}
+
+textarea:focus-visible {
+  border: 1px solid #DA9E63;
 }
 
 .radio-input {
@@ -725,7 +735,7 @@ textarea:focus-visible {
   color: var(--dark-green);
 }
 
-input[type="submit"] {
+button {
   display: inline-block;
   width: auto;
   cursor: pointer;
@@ -895,7 +905,7 @@ R E S P O N S I V E
 
   .bird-of-paradise {
     width: 110%;
-    left: -5%;
+    left: -45%;
     bottom: -62%;
   }
 
@@ -968,10 +978,6 @@ R E S P O N S I V E
     max-width: 100%;
   }
 
-  .quote {
-    font-size: 64px;
-  }
-
   .mushroom {
     left: -45%;
   }
@@ -997,8 +1003,8 @@ R E S P O N S I V E
     bottom: 25%;
   }
 
-  .quote-2-text {
-    font-size: 52px;
+  #quote-2 {
+    min-height: 50vh;
   }
 
   .seahorse-left {
@@ -1047,6 +1053,35 @@ R E S P O N S I V E
 
   .student-name p {
     font-size: 15px;
+  }
+
+  .enquiry-form-container {
+    padding: 12px 0;
+  }
+
+  #enquiryForm {
+    grid-gap: 24px;
+  }
+
+  input {
+    padding: 8px 0 12px;
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .radio-label {
+    padding: 8px 18px;
+    margin-bottom: 8px;
+  }
+
+  button {
+    padding: 18px 30px;
   }
 
 }
