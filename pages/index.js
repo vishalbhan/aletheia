@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import NavLogo from '@components/NavLogo'
 import Image from 'next/image'
 import { useLocomotiveScroll } from 'react-locomotive-scroll'
@@ -63,6 +63,14 @@ export default function Home() {
       y: -200,
       force3D: true
     });
+
+    gsap.to('.mobile-hero-cta', {
+      scrollTrigger: {
+        trigger: '.mobile-hero-cta',
+        start: 'top 20%',
+        onEnter: () => document.querySelector('.mobile-hero-cta').classList.add('hide')
+      }
+    })
   }, [])
 
   const goToAbout = () => {
