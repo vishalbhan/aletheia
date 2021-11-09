@@ -130,6 +130,11 @@ button {
   color: var(--dark-green);
   border: none;
   cursor: pointer;
+  transition: all 0.5s var(--ease);
+}
+
+button:hover {
+  background: var(--golden);
 }
 
 /* Utilities */
@@ -679,6 +684,7 @@ input {
 }
 
 input::placeholder {
+  font-size: 16px;
   color: #EAE5D250;
 }
 
@@ -847,6 +853,7 @@ R E S P O N S I V E
 
   .illustration {
     width: 125%;
+    transform: translateY(300px);
   }
 
   h1 {
@@ -967,7 +974,8 @@ R E S P O N S I V E
 
   .octopus {
     right: -45%;
-    top: -20%;
+    top: -30%;
+    /* transform: translateY(200px); */
   }
 
   #quote-1 {
@@ -980,6 +988,7 @@ R E S P O N S I V E
 
   .mushroom {
     left: -45%;
+    transform: translateY(100px);
   }
 
   .process-item {
@@ -1008,14 +1017,16 @@ R E S P O N S I V E
   }
 
   #quote-2 .quote-logo {
+    width: 55px;
     margin-left: 35%;
   }
 
   .seahorse-left {
     width: 35%;
     left: 5%;
-    top: -42%;
+    top: -50%;
     bottom: auto;
+    transform: translateY(150px);
   }
 
   .cream-section {
@@ -1069,12 +1080,11 @@ R E S P O N S I V E
 
   input {
     padding: 8px 0 12px;
-    font-size: 15px;
     margin-bottom: 8px;
   }
 
   label {
-    font-size: 11px;
+    font-size: 10px;
     letter-spacing: 2px;
     margin-bottom: 8px;
   }

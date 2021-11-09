@@ -16,6 +16,10 @@ import butterfly from '../public/images/butterfly.png'
 import TutorsSlider from '@components/TutorsSlider'
 import TestimonialSlider from '@components/TestimonialSlider'
 import EnquiryForm from '@components/EnquiryForm'
+import gsap from 'gsap/dist/gsap'
+import ScrollTrigger from 'gsap/dist/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 export default function Home() {
   const { scroll } = useLocomotiveScroll()
@@ -36,6 +40,30 @@ export default function Home() {
       })
     }
   }, [scroll])
+
+  useEffect(() => {
+    gsap.utils.toArray(".illustration").forEach(target => {
+      gsap.to(target, {
+        scrollTrigger: {
+          trigger: target,
+          start: 'top bottom',
+          scrub: true
+        },
+        y: -100,
+        force3D: true
+      });
+    })
+
+    gsap.to('.hero-image', {
+      scrollTrigger: {
+        trigger: '.hero-image',
+        start: 'top top',
+        scrub: true
+      },
+      y: -200,
+      force3D: true
+    });
+  }, [])
 
   const goToAbout = () => {
     scroll && scroll.scrollTo("#about")
@@ -347,7 +375,7 @@ export default function Home() {
 
           <h1 className="fade-up" data-scroll>Make an Enquiry</h1>
 
-          <div className="enquiry-form-container">
+          <div className="enquiry-form-container fade-up" data-scroll>
             <EnquiryForm />
           </div>
 
