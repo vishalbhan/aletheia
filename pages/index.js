@@ -13,6 +13,7 @@ import quote2 from '../public/images/quote-2.png'
 import seahorseleft from '../public/images/seahorseleft.png'
 import pineapple from '../public/images/pineapple.png'
 import butterfly from '../public/images/butterfly.png'
+import about from '../public/images/about.png'
 import TutorsSlider from '@components/TutorsSlider'
 import TestimonialSlider from '@components/TestimonialSlider'
 import EnquiryForm from '@components/EnquiryForm'
@@ -85,8 +86,8 @@ export default function Home() {
     scroll && scroll.scrollTo("#why", { duration: 2000 })
   }
 
-  const goToContact = () => {
-    scroll && scroll.scrollTo("#contact")
+  const goToEnquiry = () => {
+    scroll && scroll.scrollTo("#enquiry")
   }
 
   return (
@@ -111,7 +112,7 @@ export default function Home() {
               <div className="nav-item" onClick={goToAbout}>Who We Are</div>
               <div className="nav-item" onClick={goToDifferent}>Our Process</div>
               <div className="nav-item" onClick={goToWhy}>Why Aletheia?</div>
-              <div className="nav-item" onClick={goToContact}>Make an Enquiry</div>
+              <div className="nav-item" onClick={goToEnquiry}>Make an Enquiry</div>
             </nav>
           </div>
         </div>
@@ -262,7 +263,7 @@ export default function Home() {
                 "To teach is to create a space in which obedience to truth is practiced."<br/>
                 — Parker Palmer
               </div> */}
-              <Image src={quote1} />
+              <Image src={quote1} priority />
             </div>
 
           </div>
@@ -342,7 +343,7 @@ export default function Home() {
               “Man is all symmetrie, Full of proportions, one limbe to another, And all to all the world besides: Each part may call the farthest, brother: For head with foot hath private amitie, And both with moons and tides.”<br/>
               - George Herbert, The Temple
               </div> */}
-              <Image src={quote2} />
+              <Image src={quote2} priority />
             </div>
 
             <div className="seahorse-left illustration left" data-scroll data-scroll-speed="6" data-scroll-offset="0,10%">
@@ -385,6 +386,12 @@ export default function Home() {
 
           <div className="enquiry-form-container fade-up" data-scroll>
             <EnquiryForm />
+          </div>
+
+          <div className="nautilus-2 illustration left" data-scroll data-scroll-speed="4" data-scroll-offset="0,10%">
+            <div className="scale">
+              <Image src={nautilus} priority />
+            </div>
           </div>
 
         </div>

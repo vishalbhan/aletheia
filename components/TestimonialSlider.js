@@ -11,24 +11,12 @@ export default function TestimonialSlider() {
             student: "Carolina, King's College London",
         },
         {
-            testimonial: '“Working with Andreas was a transformative year because it helped me find my voice in my writing. My essays culminated in a high first in my Master’s dissertation, in which I was able to write more creatively and analyse research materials more confidently than ever before. I am grateful for Andreas’ guidance and will carry this experience forward with me.”',
-            student: "Carolina, King's College London",
+            testimonial: '“Kalle Timperi was my senior under the same research group during my PhD. We had discussions together in the college café regarding research ideas. I remember especially during a few of our first meetings, he explained in detailed about the central idea of our research goal in the group and it really got me motivated and excited about the research project. Particularly, I thought he was skilful in explaining complex ideas rigorously but at the same time found simple analogous ideas which allowed me to understand the whole picture more easily. His calm and composed character made these sessions enjoyable and we often talked through the evenings without realising it.”',
+            student: "Wei Hao Tey, PhD in Mathematics, Imperial College London",
         },
         {
-            testimonial: '“Working with Andreas was a transformative year because it helped me find my voice in my writing. My essays culminated in a high first in my Master’s dissertation, in which I was able to write more creatively and analyse research materials more confidently than ever before. I am grateful for Andreas’ guidance and will carry this experience forward with me.”',
-            student: "Carolina, King's College London",
-        },
-        {
-            testimonial: '“Working with Andreas was a transformative year because it helped me find my voice in my writing. My essays culminated in a high first in my Master’s dissertation, in which I was able to write more creatively and analyse research materials more confidently than ever before. I am grateful for Andreas’ guidance and will carry this experience forward with me.”',
-            student: "Carolina, King's College London",
-        },
-        {
-            testimonial: '“Working with Andreas was a transformative year because it helped me find my voice in my writing. My essays culminated in a high first in my Master’s dissertation, in which I was able to write more creatively and analyse research materials more confidently than ever before. I am grateful for Andreas’ guidance and will carry this experience forward with me.”',
-            student: "Carolina, King's College London",
-        },
-        {
-            testimonial: '“Working with Andreas was a transformative year because it helped me find my voice in my writing. My essays culminated in a high first in my Master’s dissertation, in which I was able to write more creatively and analyse research materials more confidently than ever before. I am grateful for Andreas’ guidance and will carry this experience forward with me.”',
-            student: "Carolina, King's College London",
+            testimonial: '“Andreas was instrumental in helping me discover my interests and writing style throughout university. He was able to guide me in fields stretching from psychology to international relations to economics, and has an incredibly impressive understanding of such a wide array of subjects. Andreas supported me through long coursework projects, exam periods and dissertations, teaching me how to think critically and creatively and how to write with conviction. He intuitively understands how to tease out new insights and make new discoveries, a skill that I unlocked in myself and that enabled my ideas to shine through my writing all the more clearly. I recommend Andreas without hesitation.”',
+            student: "Julia, Sciences-Po and LSE",
         },
     ])
 

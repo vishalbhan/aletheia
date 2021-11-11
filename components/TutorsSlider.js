@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
+import andreas from '../public/images/andreas.jpg'
 import athamos from '../public/images/athamos.png'
 import kalle from '../public/images/kalle.png'
 import lee from '../public/images/lee.png'
+import matthias from '../public/images/matthias.jpeg'
 import { BsArrowRight, BsArrowLeft } from 'react-icons/bs'
 import gsap from 'gsap/dist/gsap'
 
@@ -11,7 +13,7 @@ export default function TutorsSlider() {
     const [activeSlideIndex, setActiveSlideIndex] = useState(0)
     const [tutors] = useState([
         {
-            imgName: 'athamos',
+            imgName: 'andreas',
             name: 'Dr. Andreas Stradis',
             qualification: 'PhD MSc MA (Oxon)',
             about: 'Andreas read English Literature at Magdalen College, Oxford, before going on to complete his MA in International Relations at the LSE. He won an AHRC scholarship for his PhD at the University of Bristol, balancing research with service as an officer in the British Army Reserve. He then spent two years in government on the Civil Service Fast Stream and a year at Barclays Bank before deciding to pursue teaching full-time. His continues his own research in Art History at the University of Zürich whilst completing Yoga Teacher Training.'
@@ -26,13 +28,19 @@ export default function TutorsSlider() {
             imgName: 'kalle',
             name: 'Dr. Kalle Timperi',
             qualification: 'PhD MSc BSc',
-            about: 'Kalle obtained his BSc and MSc in pure mathematics at the University of Helsinki, Finland. To satisfy his curiosity towards complex phenomena in nature and society, he went on to complete his PhD on random dynamical systems at Imperial College London. Kalle communicates scientific ideas with a combination of passion and devotion, and he received the second price in the Virtual Maths Symposium Competition at Imperial. Kalle is driven by the desire to uncover unifying threads between apparently disparate fields and activities, testified by his varied activity as a teacher, free-lance pianist and amateur Go player.'
+            about: 'Having studied pure mathematics to masters level at the University at Helsinki, Kalle became intrigued by complex phenomena in society and nature. His curiosity led him to complete a PhD on random dynamical systems at Imperial College London, where his ability to communicate his ideas won him second prize in the Virtual Maths Symposium Competition. Kalle’s eclectic roles - as a teacher, a freelance pianist, and an amateur Go player - are reflective of his academic journey: to uncover the unifying threads between apparently disparate fields.'
         },
         {
             imgName: 'lee',
             name: 'Lee Sharkey',
             qualification: 'MSc, MSc, BA (Cantab)',
-            about: 'Lee studied preclinical medicine and neuroscience at Pembroke College (Cambridge) and worked as a public health consultant at the World Health Organisation in the early years of his career. He was drawn away from a career in Health by his deep curiosity for artificial intelligence, which he studied throughout two MSc degrees: one in Data Analytics in Glasgow (awarded with Distinction) and the other in Neural Systems and Computation at ETH Zürich, where he worked as a teaching assistant. Currently, Lee is a PhD candidate in the Human and Machine Cognition lab at the University of Tübingen, where he researches how to build principles of human intelligence into machines.'
+            about: 'Lee studied preclinical medicine and neuroscience Pembroke College, Cambridge, before working as as a public health consultant at the World Health Organisation. His fascination with artificial intelligence led him to complete to masters degrees - one at Glasgow, and a second at ETH Zurich, where he also worked as a teaching assistant. Currently, Lee is a PhD candidate at the University of Tübingen, where he investigating how to build principles of human intelligence into machines.'
+        },
+        {
+            imgName: 'matthias',
+            name: 'Matthias Galipaud',
+            qualification: 'PhD, MSc, BSc',
+            about: 'Matthias studied evolutionary biology and ecology at the University of Burgundy before going on to obtain his PhD on the evolution of mating behaviours. During his academic positions at the University of Bielefeld and the University of Zurich, Matthias steered his research towards the science of ageing, investigating why different organisms have different lifespans. At the same time, he has taught statistical methodology alongside biological topics in a wide range of contexts - not only to school and undergraduate students, but also to companies and medical institutions aiming to optimise the handling of data.'
         }
     ])
 
@@ -72,7 +80,11 @@ export default function TutorsSlider() {
             <div className="tutors-slider-card">
                 <div className="tutors-card-content">
                     <div className="tutor-image">
-                        <img src={`/images/${activeSlide?.imgName}.png`} />
+                        { activeSlideIndex === 0 && <Image src={andreas} priority /> }
+                        { activeSlideIndex === 1 && <Image src={athamos} priority /> }
+                        { activeSlideIndex === 2 && <Image src={kalle} priority /> }
+                        { activeSlideIndex === 3 && <Image src={lee} priority /> }
+                        { activeSlideIndex === 4 && <Image src={matthias} priority /> }
                     </div>
                     <div className="tutor-about-container">
                         <div className="tutor-about text-left">
