@@ -135,6 +135,14 @@ button {
 
 /* Utilities */
 
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
 .font-weight-bold {
   font-weight: 600;
 }

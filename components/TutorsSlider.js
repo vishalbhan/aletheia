@@ -80,11 +80,11 @@ export default function TutorsSlider() {
             <div className="tutors-slider-card">
                 <div className="tutors-card-content">
                     <div className="tutor-image">
-                        { activeSlideIndex === 0 && <Image src={andreas} priority /> }
-                        { activeSlideIndex === 1 && <Image src={athamos} priority /> }
-                        { activeSlideIndex === 2 && <Image src={kalle} priority /> }
-                        { activeSlideIndex === 3 && <Image src={lee} priority /> }
-                        { activeSlideIndex === 4 && <Image src={matthias} priority /> }
+                        { <div className={`${activeSlideIndex === 0 ? 'd-block' : 'd-none'}`}><Image src={andreas} priority /></div> }
+                        { <div className={`${activeSlideIndex === 1 ? 'd-block' : 'd-none'}`}><Image src={athamos} priority /></div> }
+                        { <div className={`${activeSlideIndex === 2 ? 'd-block' : 'd-none'}`}><Image src={kalle} priority /></div> }
+                        { <div className={`${activeSlideIndex === 3 ? 'd-block' : 'd-none'}`}><Image src={lee} priority /></div> }
+                        { <div className={`${activeSlideIndex === 4 ? 'd-block' : 'd-none'}`}><Image src={matthias} priority /></div> }
                     </div>
                     <div className="tutor-about-container">
                         <div className="tutor-about text-left">
