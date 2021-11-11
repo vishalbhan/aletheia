@@ -987,13 +987,14 @@ R E S P O N S I V E
 
   .tutor-name {
     color: #Fff;
-    font-size: 16px;
+    font-size: 17px;
     margin-bottom: 4px;
+    letter-spacing: 1.6px;
   }
 
   .tutor-qualification {
     color: #Fff;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .slider-nav-items {
