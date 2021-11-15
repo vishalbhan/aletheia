@@ -566,7 +566,7 @@ nav {
 }
 
 .quote-2-container {
-  max-width: 800px;
+  max-width: 660px;
   text-align: right;
   margin-left: auto;
 }
@@ -628,7 +628,7 @@ nav {
 }
 
 .illustration {
-  z-index: 0;
+  z-index: -1;
 }
 
 .illustration.right {

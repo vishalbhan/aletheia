@@ -8,17 +8,16 @@ import mushroom from '../public/images/mushrooms.png'
 import birdofparadise from '../public/images/birdofparadise.png'
 import LogoTree from '@components/LogoTree'
 import octopus from '../public/images/octopus.png'
-import quote1 from '../public/images/quote-1.png'
-import quote2 from '../public/images/quote-2.png'
 import seahorseleft from '../public/images/seahorseleft.png'
 import pineapple from '../public/images/pineapple.png'
 import butterfly from '../public/images/butterfly.png'
-import about from '../public/images/about.png'
 import TutorsSlider from '@components/TutorsSlider'
 import TestimonialSlider from '@components/TestimonialSlider'
 import EnquiryForm from '@components/EnquiryForm'
 import gsap from 'gsap/dist/gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
+import Quote1 from '@components/Quote1'
+import Quote2 from '@components/Quote2'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -263,7 +262,8 @@ export default function Home() {
                 "To teach is to create a space in which obedience to truth is practiced."<br/>
                 — Parker Palmer
               </div> */}
-              <Image src={quote1} priority />
+              {/* <Image src={quote1} priority /> */}
+              <Quote1 />
             </div>
 
           </div>
@@ -343,7 +343,8 @@ export default function Home() {
               “Man is all symmetrie, Full of proportions, one limbe to another, And all to all the world besides: Each part may call the farthest, brother: For head with foot hath private amitie, And both with moons and tides.”<br/>
               - George Herbert, The Temple
               </div> */}
-              <Image src={quote2} priority />
+              {/* <Image src={quote2} priority /> */}
+              <Quote2 />
             </div>
 
             <div className="seahorse-left illustration left" data-scroll data-scroll-speed="6" data-scroll-offset="0,10%">

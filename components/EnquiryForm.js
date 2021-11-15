@@ -80,7 +80,7 @@ export default function EnquiryForm() {
                 <textarea id="message" name="message" rows="4" />
             </div>
 
-            <div className="text-center span-2">
+            <div className="text-right span-2">
                 {
                     formStatus === 'sent' ? (
                         <p>Enquiry sent, we'll be in touch soon!</p>
