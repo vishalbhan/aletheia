@@ -103,7 +103,7 @@ export default function Home() {
           <div className="intro-text" data-scroll>
             <h1>
               Advanced<br/>
-              Private Tuition
+              Tuition
             </h1>
           </div>
           <div className="header-navigation" data-scroll>

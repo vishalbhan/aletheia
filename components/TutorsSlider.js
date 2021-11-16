@@ -38,7 +38,7 @@ export default function TutorsSlider() {
         },
         {
             imgName: 'matthias',
-            name: 'Matthias Galipaud',
+            name: 'Dr. Matthias Galipaud',
             qualification: 'PhD, MSc, BSc',
             about: 'Matthias studied evolutionary biology and ecology at the University of Burgundy before going on to obtain his PhD on the evolution of mating behaviours. During his academic positions at the University of Bielefeld and the University of Zurich, Matthias steered his research towards the science of ageing, investigating why different organisms have different lifespans. At the same time, he has taught statistical methodology alongside biological topics in a wide range of contexts - not only to school and undergraduate students, but also to companies and medical institutions aiming to optimise the handling of data.'
         }
