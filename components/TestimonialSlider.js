@@ -18,6 +18,10 @@ export default function TestimonialSlider() {
             testimonial: '“Andreas was instrumental in helping me discover my interests and writing style throughout university. He was able to guide me in fields stretching from psychology to international relations to economics, and has an incredibly impressive understanding of such a wide array of subjects. Andreas supported me through long coursework projects, exam periods and dissertations, teaching me how to think critically and creatively and how to write with conviction. He intuitively understands how to tease out new insights and make new discoveries, a skill that I unlocked in myself and that enabled my ideas to shine through my writing all the more clearly. I recommend Andreas without hesitation.”',
             student: "Julia, Sciences-Po and LSE",
         },
+        {
+            testimonial: '"Aletheia has been guiding our son Louis since summer 2020, preparing him for the AS levels, which he has passed with outstanding grades. Andreas taught him English Literature, History, Biology and Economics. His profound academic knowledge, combined with a longstanding teaching experience, makes him a highly commendable teacher. His approach is holistic: he teaches and lives values such as reliability, discipline, and honesty. As parents, we are always kept up to date. Louis is currently preparing for his A-levels and we are confident that the results will be good!"',
+            student: "Patrick, Parent (Switzerland)"
+        }
     ])
 
     useEffect(() => {
