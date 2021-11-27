@@ -101,10 +101,7 @@ export default function Home() {
       <section id="hero">
         <div className="hero-content">
           <div className="intro-text" data-scroll>
-            <h1>
-              Advanced<br/>
-              Tuition
-            </h1>
+            <h1>Advanced Tuition</h1>
           </div>
           <div className="header-navigation" data-scroll>
             <nav>
