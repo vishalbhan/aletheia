@@ -91,7 +91,7 @@ p {
 }
 
 p.large {
-  font-size: 28px;
+  font-size: 24px;
   letter-spacing: 0.5px;
   line-height: 155%;
 }
@@ -240,12 +240,19 @@ section {
 header {
   z-index: 10;
   position: absolute;
-  width: 100vw;
   top: 0;
   left: 0;
+  width: 100vw;
+  height: 180px;
   display: grid;
   place-items: center;
   padding: 20px;
+  transform: translateY(-100%);
+  transition: all 0.5s var(--ease);
+}
+
+header.in-view {
+  transform: translateY(0);
 }
 
 .header-logo {
@@ -497,7 +504,7 @@ nav {
 }
 
 .different-text {
-  max-width: 760px;
+  max-width: 660px;
 }
 
 .octopus {
@@ -523,7 +530,7 @@ nav {
 }
 
 .ethos-text {
-  max-width: 840px;
+  max-width: 760px;
   margin-left: auto;
 }
 
@@ -587,10 +594,8 @@ nav {
 }
 
 .why-para {
-  max-width: 800px;
+  max-width: 680px;
   margin-bottom: 50px;
-  font-size: 32px;
-  line-height: 155%;
 }
 
 .butterfly {

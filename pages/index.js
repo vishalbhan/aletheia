@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import NavLogo from '@components/NavLogo'
 import Image from 'next/image'
 import { useLocomotiveScroll } from 'react-locomotive-scroll'
 import shell from '../public/images/shell.png'
@@ -18,6 +17,7 @@ import gsap from 'gsap/dist/gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import Quote1 from '@components/Quote1'
 import Quote2 from '@components/Quote2'
+import logo from '../public/images/logo.png'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -92,9 +92,9 @@ export default function Home() {
   return (
     <div data-scroll-section>
 
-      <header>
-        <div className="header-logo" data-scroll>
-          <NavLogo />
+      <header data-scroll>
+        <div className="header-logo">
+          <Image src={logo} alt="Aletheia Logo" />
         </div>
       </header>
 
