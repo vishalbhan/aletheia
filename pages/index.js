@@ -94,7 +94,7 @@ export default function Home() {
 
       <header data-scroll>
         <div className="header-logo">
-          <Image src={logo} alt="Aletheia Logo" />
+          <Image src={logo} alt="Aletheia Logo" priority />
         </div>
       </header>
 
