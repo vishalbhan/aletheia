@@ -22,7 +22,7 @@ export default function TutorsSlider() {
             imgName: 'athamos',
             name: 'Dr. Athamos Stradis',
             qualification: 'PhD BPhil (Oxon) MSci',
-            about: "After studying astrophysics at UCL, Athamos gravitated towards the philosophical questions of science, going on to study them at Oriel College, Oxford. Athamos completed his PhD on the 'arrow of time' at King's College London, where he won the King’s Teaching Excellence Award and the Jacobsen Prize in Philosophy. Today he continues to be an active researcher in metaphysics and philosophy of physics, and pursues his love of drawing as an illustrator for Philosophy Now magazine."
+            about: "After studying astrophysics at UCL, Athamos gravitated towards the philosophical questions of science, going on to study them at Oriel College, Oxford. Athamos completed his PhD on the 'arrow of time' at King's College London, where he won the King’s Teaching Excellence Award and the Jacobsen Prize in Philosophy. Today he continues to be an active researcher in metaphysics and philosophy of physics, and pursues his love of drawing as an illustrator for <em>Philosophy Now</em> magazine."
         },
         {
             imgName: 'kalle',
@@ -88,7 +88,7 @@ export default function TutorsSlider() {
                     </div>
                     <div className="tutor-about-container">
                         <div className="tutor-about text-left">
-                            <p>{activeSlide?.about}</p>
+                            <p dangerouslySetInnerHTML={{ __html: activeSlide?.about}} />
                         </div>
                     </div>
                     <div className="tutor-details">
