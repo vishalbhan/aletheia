@@ -21,6 +21,10 @@ export default function TestimonialSlider() {
         {
             testimonial: '"Aletheia has been guiding our son Louis since summer 2020, preparing him for the AS levels, which he has passed with outstanding grades. Andreas taught him English Literature, History, Biology and Economics. His profound academic knowledge, combined with a longstanding teaching experience, makes him a highly commendable teacher. His approach is holistic: he teaches and lives values such as reliability, discipline, and honesty. As parents, we are always kept up to date. Louis is currently preparing for his A-levels and we are confident that the results will be good!"',
             student: "Patrick, Parent (Switzerland)"
+        },
+        {
+            testimonial: '"In my first year of university, I was privileged to study philosophy with Athamos as my Graduate Teaching Assistant. I immensely enjoyed the time we spent engaging in philosophical discourse on a wide range of topics from epistemology to physics, both in and out of the classroom. Athamos brought the material alive, and all of his students came to seminars excited for our discussions. His feedback on my essays greatly improved my writing skills, helping me achieve the highest marks in my year. His "Teaching Excellence Award" was well deserved!”',
+            student: "Daniel Cahn, King’s College London"
         }
     ])
 
