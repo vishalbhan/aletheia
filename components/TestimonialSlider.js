@@ -11,7 +11,7 @@ export default function TestimonialSlider() {
             student: "Carolina, King's College London",
         },
         {
-            testimonial: '“Kalle Timperi was my senior under the same research group during my PhD. We had discussions together in the college café regarding research ideas. I remember especially during a few of our first meetings, he explained in detailed about the central idea of our research goal in the group and it really got me motivated and excited about the research project. Particularly, I thought he was skilful in explaining complex ideas rigorously but at the same time found simple analogous ideas which allowed me to understand the whole picture more easily. His calm and composed character made these sessions enjoyable and we often talked through the evenings without realising it.”',
+            testimonial: '“Kalle Timperi was my senior under the same research group during my PhD. We had discussions together in the college café regarding research ideas. I remember especially during a few of our first meetings, he explained in detail about the central idea of our research goal in the group and it really got me motivated and excited about the research project. Particularly, I thought he was skilful in explaining complex ideas rigorously but at the same time found simple analogous ideas which allowed me to understand the whole picture more easily. His calm and composed character made these sessions enjoyable and we often talked through the evenings without realising it.”',
             student: "Wei Hao Tey, PhD in Mathematics, Imperial College London",
         },
         {
