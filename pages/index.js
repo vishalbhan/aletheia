@@ -300,7 +300,7 @@ export default function Home() {
 
             <div className="process-item fade-up" data-scroll>
               <p className="process-number">2</p>
-              <p className="process-text" data-scroll data-scroll-delay="0.10">Establishing a strong chemistry between tutor and tutee based on shared interests is vital. The importance we ascribe to this principle means that we are not always able to take on new students; far from it. But if the alignment is right, we provide our students with a platform for learning that can take them to the farthest reaches of their imagination.</p>
+              <p className="process-text" data-scroll data-scroll-delay="0.10">Establishing a strong chemistry between tutor and tutee based on shared interests is vital. If the alignment is right, we provide our students with a platform for learning that can take them to the farthest reaches of their imagination.</p>
             </div>
 
             <div className="process-item fade-up" data-scroll>
