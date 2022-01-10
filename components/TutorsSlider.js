@@ -47,7 +47,7 @@ export default function TutorsSlider() {
 			imgName: 'tom',
 			name: 'Dr. Tom Beevers',
 			qualification: 'BA, MSc, PhD',
-			about: "Throughout his academic career, Tom's interest in philosophy has been practical and theoretical in equal measure. After studying the subject at the University of Manchester, Tom completed an MSc in Philosophy and Public Policy at the LSE. This enabled him to lever his studies toward pragmatic goals via two years of research at the Early Intervention Foundation, a charity whose aim is to assess the effectiveness of various mental health and educational programmes. On the more theoretical side, Tom’s interest in the relationship between logic and language led him to pursue a PhD at King’s College London, where he won an AHRC scholarship and was joint winner of the Jacobsen Prize in Philosophy. Tom's broad philosophical interests are reflected in his teaching experience both inside and outside university, which encompasses a range of topics including politics, ethics, and epistemology."
+			about: "Throughout his academic career, Tom’s interest in philosophy has been practical and theoretical in equal measure. After graduating from the University of Manchester, Tom completed an MSc in Philosophy and Public Policy at the LSE before spending two years as a researcher at the Early Intervention Foundation – a charity that assesses the effectiveness of mental health and educational programmes. On the more theoretical side, Tom’s interest in the relationship between logic and language led him to pursue a PhD at King’s College London, where he won an AHRC scholarship, was joint winner of the Jacobsen Prize in Philosophy, and taught a diverse range of courses."
 		}
 	])
 
