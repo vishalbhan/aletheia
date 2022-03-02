@@ -841,8 +841,8 @@ button.secondary:hover {
 }
 
 #join {
-  padding: 150px 0;
-  min-height: none;
+  padding: 200px 0;
+  min-height: 0;
   margin: 0;
 }
 
@@ -853,8 +853,8 @@ button.secondary:hover {
 #join p {
   max-width: 800px;
   margin: 0 auto;
-  font-size: 34px;
-  line-height: 53px;
+  /* font-size: 34px;
+  line-height: 53px; */
 }
 
 /*********************************************************************************************************
