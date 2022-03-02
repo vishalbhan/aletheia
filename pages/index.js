@@ -120,7 +120,7 @@ export default function Home() {
 
         <div className="hero-image-container" data-scroll>
           <div className="hero-image" data-scroll data-scroll-speed="5">
-            <Image src={shell} priority />
+            <Image src={shell} alt="" priority />
           </div>
         </div>
 
@@ -141,7 +141,7 @@ export default function Home() {
 
           <div className="nautilus illustration right" data-scroll data-scroll-speed="6" data-scroll-offset="0,10%">
             <div className="scale">
-              <Image src={nautilus} priority />
+              <Image src={nautilus} alt="" priority />
             </div>
           </div>
 
@@ -153,7 +153,7 @@ export default function Home() {
           <div className="desktop-services">
             <div className="seahorse-1 illustration left" data-scroll data-scroll-speed="6" data-scroll-offset="0,10%">
               <div className="scale">
-                <Image src={seahorseleft} priority />
+                <Image src={seahorseleft} alt="" priority />
               </div>
             </div>
             <div className="overflow-hidden">
@@ -247,7 +247,7 @@ export default function Home() {
 
         <div className="bird-of-paradise illustration right" data-scroll data-scroll-speed="4" data-scroll-offset="0,10%">
           <div className="scale">
-            <Image src={birdofparadise} priority />
+            <Image src={birdofparadise} alt="" priority />
           </div>
         </div>
       </section>
@@ -276,7 +276,7 @@ export default function Home() {
 
             <div className="octopus illustration right" data-scroll data-scroll-speed="-2" data-scroll-offset="0,10%">
               <div className="scale">
-                <Image src={octopus} priority />
+                <Image src={octopus} alt="" priority />
               </div>
             </div>
 
@@ -312,7 +312,7 @@ export default function Home() {
 
           <div className="mushroom illustration left" data-scroll data-scroll-speed="3" data-scroll-offset="0,10%">
             <div className="scale">
-              <Image src={mushroom} priority />
+              <Image src={mushroom} alt="" priority />
             </div>
           </div>
 
@@ -352,7 +352,7 @@ export default function Home() {
 
           <div className="pineapple illustration right" data-scroll data-scroll-speed="7" data-scroll-offset="0,10%">
             <div className="scale">
-              <Image src={pineapple} priority />
+              <Image src={pineapple} alt="" priority />
             </div>
           </div>
         </section>
@@ -369,7 +369,7 @@ export default function Home() {
             </div>
             <div className="seahorse-2 illustration left" data-scroll data-scroll-speed="6" data-scroll-offset="0,10%">
               <div className="scale">
-                <Image src={seahorseleft} priority />
+                <Image src={seahorseleft} alt="" priority />
               </div>
             </div>
         </div>
@@ -419,7 +419,7 @@ export default function Home() {
 
           <div className="butterfly illustration right" data-scroll data-scroll-speed="-4" data-scroll-offset="0,10%">
             <div className="scale">
-              <Image src={butterfly} priority />
+              <Image src={butterfly} alt="" priority />
             </div>
           </div>
 
@@ -444,7 +444,7 @@ export default function Home() {
 
           <div className="nautilus-2 illustration left" data-scroll data-scroll-speed="4" data-scroll-offset="0,10%">
             <div className="scale">
-              <Image src={nautilus} priority />
+              <Image src={nautilus} alt="" priority />
             </div>
           </div>
 
@@ -457,7 +457,7 @@ export default function Home() {
           <p className="fade-up" data-scroll>
             Interested in joining Aletheia's community of educators? 
             <br/><br/>
-            If you feel inclined to inspire, please don't hesitate to contact us at <a className="text-gold" href="mailto:info@aletheia-tutors.ch" target="_blank">info@aletheia-tutors.ch</a>.
+            If you feel inclined to inspire, please don't hesitate to contact us at <a className="text-gold" href="mailto:info@aletheia-tutors.ch" target="_blank" rel="noreferrer">info@aletheia-tutors.ch</a>.
             <br/><br/>
             On receipt of a full CV and one page formal letter of interest, one of our management team will get back to you as soon as possible.
           </p>
