@@ -18,6 +18,7 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import Quote1 from '@components/Quote1'
 import Quote2 from '@components/Quote2'
 import logo from '../public/images/logo.png'
+import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -77,16 +78,20 @@ export default function Home() {
     scroll && scroll.scrollTo("#about")
   }
 
-  const goToDifferent = () => {
-    scroll && scroll.scrollTo("#different", { duration: 1500 })
+  const goToMission = () => {
+    scroll && scroll.scrollTo("#mission", { duration: 1500 })
   }
 
   const goToWhy = () => {
-    scroll && scroll.scrollTo("#why", { duration: 2000 })
+    scroll && scroll.scrollTo("#process", { duration: 2000 })
   }
 
   const goToEnquiry = () => {
     scroll && scroll.scrollTo("#enquiry")
+  }
+
+  const goToJoin = () => {
+    scroll && scroll.scrollTo("#join")
   }
 
   return (
@@ -106,8 +111,8 @@ export default function Home() {
           <div className="header-navigation" data-scroll>
             <nav>
               <div className="nav-item" onClick={goToAbout}>Who We Are</div>
-              <div className="nav-item" onClick={goToDifferent}>Our Process</div>
-              <div className="nav-item" onClick={goToWhy}>Why Aletheia?</div>
+              <div className="nav-item" onClick={goToMission}>Our Mission</div>
+              <div className="nav-item" onClick={goToWhy}>Our Process</div>
               <div className="nav-item" onClick={goToEnquiry}>Make an Enquiry</div>
             </nav>
           </div>
@@ -143,38 +148,69 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="text-left" data-scroll data-scroll-speed="2">
+      <section id="services" className="text-left" data-scroll>
         <div className="container">
-
           <div className="desktop-services">
+            <div className="seahorse-1 illustration left" data-scroll data-scroll-speed="6" data-scroll-offset="0,10%">
+              <div className="scale">
+                <Image src={seahorseleft} priority />
+              </div>
+            </div>
             <div className="overflow-hidden">
               <h1 data-scroll className="fade-up">Our Services</h1>
             </div>
-
-            <div className="line" data-scroll></div>
-            
+            {/* School Tuition */}
+            <div className="line" data-scroll data-scroll-offset="0,10%"></div>
             <div className="services-header text-center">
-              <div className="overflow-hidden grid-3">
-                <h2 data-scroll>School<br/>Tuition</h2>
-                <h2 data-scroll>University<br/>Tuition</h2>
-                <h2 data-scroll>Mentoring &amp;<br/>Advice</h2>
+              <div className="overflow-hidden">
+                <h2 className="text-gold" data-scroll data-scroll-offset="0,10%">School Tuition</h2>
               </div>
             </div>
-
-            <div className="line" data-scroll></div>
-
-            <div className="services-items text-center grid-3" data-scroll>
-              <div className="services-item fade-up" data-scroll>
-                <p>lower school (up to 16)</p>
-                <p>upper school (16+)</p>
+            <div className="line" data-scroll data-scroll-offset="0,10%"></div>
+            <div className="services-items text-left grid-2" data-scroll data-scroll-offset="0,10%">
+              <div className="services-item fade-up" data-scroll data-scroll-offset="0,10%">
+                <p className="font-weight-bold">lower school (up to 16)</p>
+                <p className="sm">In these early years, the bedrock of a successful life are laid, through an energised, wide-ranging approach to learning. By unlocking the element of play in their academic work, we enable our students to lay the foundations for effortless, independent learning throughout their school careers.</p>
               </div>
-              <div className="services-item fade-up" data-scroll>
-                <p>undergraduate</p>
-                <p>postgraduate</p>
+              <div className="services-item fade-up" data-scroll data-scroll-offset="0,10%">
+                <p className="font-weight-bold">lower school (up to 16)</p>
+                <p className="sm">Whether students are struggling to keep up or not being stretched intellectually, we seek to improve performance by leaving the syllabus behind. Drawing on decades of experience with A-Levels, the International Baccalaureate, the US high school system, SATs and ACTs, we create unique programmes that incinerate old habits and ignite curiosity in our students. They emerge with a level of advanced knowledge and extracurricular activity that sets them apart from their peers and is essential for successful university applications.</p>
               </div>
-              <div className="services-item fade-up" data-scroll>
-                <p>university applications</p>
-                <p>careers advice</p>
+            </div>
+            {/* Univerity Tuition */}
+            <div className="line" data-scroll data-scroll-offset="0,10%"></div>
+            <div className="services-header text-center">
+              <div className="overflow-hidden">
+                <h2 className="text-gold" data-scroll data-scroll-offset="0,10%">University Tuition</h2>
+              </div>
+            </div>
+            <div className="line" data-scroll data-scroll-offset="0,10%"></div>
+            <div className="services-items text-left grid-2" data-scroll data-scroll-offset="0,10%">
+              <div className="services-item fade-up" data-scroll data-scroll-offset="0,10%">
+                <p className="font-weight-bold">undergraduate</p>
+                <p className="sm">University can be daunting, whether grappling with new concepts, structuring academic work, establishing a routine or simply learning how to learn. Often, contact time with teaching staff is limited and questions arise faster than they can be answered during the bustle of term time. Aletheia provides the proximity of an Oxbridge tutorial or supervision anywhere in the world and at any time, supporting our undergraduates to proceed through their degrees with confidence and flair.</p>
+              </div>
+              <div className="services-item fade-up" data-scroll data-scroll-offset="0,10%">
+                <p className="font-weight-bold">postgraduate</p>
+                <p className="sm">From understanding the theoretical landscape in your degree to discovering a unique angle in your research, our roster of academic staff has seen it all. The unrivalled experience Aletheia's tutors bring to bear has helped students find confidence and direction with theses, research council grant applications, and job applications.</p>
+              </div>
+            </div>
+            {/* Mentoring & Advice */}
+            <div className="line" data-scroll data-scroll-offset="0,10%"></div>
+            <div className="services-header text-center">
+              <div className="overflow-hidden">
+                <h2 className="text-gold" data-scroll data-scroll-offset="0,10%">Mentoring &amp; Advice</h2>
+              </div>
+            </div>
+            <div className="line" data-scroll data-scroll-offset="0,10%"></div>
+            <div className="services-items text-left grid-2" data-scroll data-scroll-offset="0,10%">
+              <div className="services-item fade-up" data-scroll data-scroll-offset="0,10%">
+                <p className="font-weight-bold">university applications</p>
+                <p className="sm">What differentiates the successful university application is the sum of small, subtle differences. Aletheia's guidance comes from within the academic system itself, furnishing our students with the insights and skills necessary to stand out from an already gifted crowd. Guided by their passions in tandem with our expertise, our alumni go on to find that happiness breeds excellence on their academic journeys.</p>
+              </div>
+              <div className="services-item fade-up" data-scroll data-scroll-offset="0,10%">
+                <p className="font-weight-bold">careers advice</p>
+                <p className="sm">At Aletheia, scholarship is understood in the context of global citizenship. This is reflected in the calibre of our tutors, who are much more than scholars alone. Their industry experience spans diplomacy, finance, government, international organisations, medicine and the military, to name but a few. Aletheia's tutors bring all of this to bear, helping students embark on the journey of defining and achieving their own success.</p>
               </div>
             </div>
           </div>
@@ -209,33 +245,32 @@ export default function Home() {
 
         </div>
 
-        <div className="bird-of-paradise illustration left" data-scroll data-scroll-speed="4" data-scroll-offset="0,10%">
+        <div className="bird-of-paradise illustration right" data-scroll data-scroll-speed="4" data-scroll-offset="0,10%">
           <div className="scale">
             <Image src={birdofparadise} priority />
           </div>
         </div>
       </section>
 
-      <section id="tutors" data-scroll data-scroll-speed="2">
+      <section id="tutors" data-scroll>
         <div className="container">
           <h1 data-scroll className="fade-up">Our Tutors</h1>
           <TutorsSlider />
+          <button className="secondary" onClick={goToJoin}>Become a Tutor</button>
         </div>
       </section>
 
       <div data-scroll data-scroll-call="cream-section" data-scroll-repeat data-scroll-offset="40%">
 
-        <section id="different" className="text-left">
+        <section id="mission" className="text-left">
           <div className="container">
 
             <div data-scroll>
-              <h1 className="fade-up" data-scroll data-scroll-offset="40%" >What makes us different?</h1>
+              <h1 className="fade-up" data-scroll data-scroll-offset="40%" >Our Mission</h1>
               <p className="different-text large text-dark fade-up delay-1" data-scroll data-scroll-offset="40%" >
-                We want to produce proactive young citizens of the world with a strong work ethic and carefully deliberated opinions.
-                <br /><br />
-                Regardless of the subject studied, we value interdisciplinary awareness and not myopic focus.
-                <br /><br />
-                At Aletheia, we believe academic honesty produces self-reliant, independent, and curious self-learners. Our job is to teach ourselves out of a job.
+                Aletheia's mission bucks the trend of traditional private tuition: to launch energised and independent young minds into the world.
+                <br/><br/>
+                Regardless of the subject studied, we value interdisciplinary awareness and not myopic focus. Our young and eclectic team of educators is able to guide students beyond the standard syllabus, to the furthest reaches of their imagination.
               </p>
             </div>
 
@@ -255,11 +290,6 @@ export default function Home() {
               <div className="quote-logo-container">
                 <div className="quote-logo"><LogoTree /></div>
               </div>
-              {/* <div className="quote qoute-1-text">
-                "To teach is to create a space in which obedience to truth is practiced."<br/>
-                — Parker Palmer
-              </div> */}
-              {/* <Image src={quote1} priority /> */}
               <Quote1 />
             </div>
 
@@ -288,10 +318,10 @@ export default function Home() {
 
         </section>
 
-        <section id="process" className="text-left text-dark" data-scroll>
+        <section id="philosophy" className="text-left text-dark" data-scroll>
           <div className="container">
 
-            <h1 className="fade-up" data-scroll>Our Process</h1>
+            <h1 className="fade-up" data-scroll>Our Philosophy</h1>
 
             <div className="process-item fade-up" data-scroll>
               <p className="process-number">1</p>
@@ -331,32 +361,58 @@ export default function Home() {
 
       <section id="quote-2">
         <div className="container">
-
             <div className="quote-2-container fade-up" data-scroll>
               <div className="quote-logo-container">
                 <div className="quote-logo"><LogoTree /></div>
               </div>
-              {/* <div className="quote quote-2-text">
-              “Man is all symmetrie, Full of proportions, one limbe to another, And all to all the world besides: Each part may call the farthest, brother: For head with foot hath private amitie, And both with moons and tides.”<br/>
-              - George Herbert, The Temple
-              </div> */}
-              {/* <Image src={quote2} priority /> */}
               <Quote2 />
             </div>
-
-            <div className="seahorse-left illustration left" data-scroll data-scroll-speed="6" data-scroll-offset="0,10%">
+            <div className="seahorse-2 illustration left" data-scroll data-scroll-speed="6" data-scroll-offset="0,10%">
               <div className="scale">
                 <Image src={seahorseleft} priority />
               </div>
             </div>
+        </div>
+      </section>
 
+      <section id="process">
+        <div className="container">
+          <div id="sticky" className="sticky-container" data-scroll data-scroll-sticky data-scroll-target="#process">
+            <h1 className="fade-up" data-scroll>Our Process</h1>
+            <div className="process-cards" data-scroll data-scroll-direction="horizontal" data-scroll-speed="31" data-scroll-target="#process">
+              <div className="process-card">
+                <h2 className="process-card-title">Communication</h2>
+                <p className="large">We begin with a detailed discussion with both parents and students, together and separately. This helps us build the most comprehensive picture possible, enabling direct communication with all concerned.</p>
+              </div>
+              {/* <div className="process-icon"><HiOutlineArrowNarrowRight size="32" /></div> */}
+              <div className="process-card">
+                <h2 className="process-card-title">Evaluation</h2>
+                <p className="large">We assess current academic records and marry these with the expertise of our tuition team. Where necessary, we ask prospective students to undertake a short written task for our evaluation.</p>
+              </div>
+              {/* <div className="process-icon"><HiOutlineArrowNarrowRight size="32" /></div> */}
+              <div className="process-card">
+                <h2 className="process-card-title">Recommendation</h2>
+                <p className="large">If we can assist, we make a recommendation for weekly contact time and duration, with an estimate in line with Aletheia's Schedule of Fees.</p>
+              </div>
+              {/* <div className="process-icon"><HiOutlineArrowNarrowRight size="32" /></div> */}
+              <div className="process-card">
+                <h2 className="process-card-title">Agreement</h2>
+                <p className="large">Tuition begins on an hourly basis during the first month, until the Aletheia Service Agreement is signed. There is no obligation on either side until the agreement is finalised.</p>
+              </div>
+              {/* <div className="process-icon"><HiOutlineArrowNarrowRight size="32" /></div> */}
+              <div className="process-card">
+                <h2 className="process-card-title">Reporting</h2>
+                <p className="large">Delivered monthly, our thorough written reports detail the teaching covered in each lesson, with recommendations clearly set out for both students and parents. We review our strategy on a semesterly basis at least.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section id="why" className="text-left">
         <div className="container">
 
-          <h1 className="why-title fade-up" data-scroll>Why Choose Aletheia?</h1>
+          <h1 className="why-title fade-up" data-scroll>What Makes Us Different?</h1>
           <p className="why-para fade-up delay-1" data-scroll>Everyone on our team is an <strong>expert</strong> in their field — whether it be ancient history, astrophysics, or artificial intelligence.</p>
           <p className="why-para fade-up delay-1" data-scroll>Our tutoring service is <strong>bespoke</strong> and constantly evolving, guided by our students' own curiosity and not the strictures of a standard syllabus.</p>
           <p className="why-para fade-up delay-1" data-scroll>You will study in a truly <strong>interdisciplinary</strong> environment, where the possibilities of your learning journey are supported by our team's mixed and complementary backgrounds.</p>
@@ -392,6 +448,19 @@ export default function Home() {
             </div>
           </div>
 
+        </div>
+      </section>
+
+      <section id="join">
+        <div className="container">
+          <h1 className="fade-up" data-scroll>Become a Tutor</h1>
+          <p className="fade-up" data-scroll>
+            Interested in joining Aletheia's community of educators? 
+            <br/><br/>
+            If you feel inclined to inspire, please don't hesitate to contact us at <a className="text-gold" href="mailto:info@aletheia-tutors.ch" target="_blank">info@aletheia-tutors.ch</a>.
+            <br/><br/>
+            On receipt of a full CV and one page formal letter of interest, one of our management team will get back to you as soon as possible.
+          </p>
         </div>
       </section>
 

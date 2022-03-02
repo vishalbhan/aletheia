@@ -17,7 +17,7 @@ export default function TutorsSlider() {
 			imgName: 'andreas',
 			name: 'Dr. Andreas Stradis',
 			qualification: 'PhD MSc MA (Oxon)',
-			about: 'Andreas read English Literature at Magdalen College, Oxford, before going on to complete his MA in International Relations at the LSE. He won an AHRC scholarship for his PhD at the University of Bristol, balancing research with service as an officer in the British Army Reserve. He then spent two years in government on the Civil Service Fast Stream and a year at Barclays Bank before deciding to pursue teaching full-time. His continues his own research in Art History at the University of Zürich whilst completing Yoga Teacher Training.'
+			about: 'Andreas read English Literature at Magdalen College, Oxford, before going on to complete his MA in International Relations at the LSE. He won an AHRC scholarship for his PhD at the University of Bristol, balancing research with service as an officer in the British Army Reserve. He then spent two years in government on the Civil Service Fast Stream and a year at Barclays Bank before deciding to pursue teaching full-time. In 2021 he became an RYS accredited yoga instructor, and continues his own research in Art History and English Literature at the University of Zürich.'
 		},
 		{
 			imgName: 'athamos',
