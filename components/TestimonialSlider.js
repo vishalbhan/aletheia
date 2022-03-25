@@ -67,7 +67,7 @@ export default function TestimonialSlider() {
                         <p>{activeSlide?.testimonial}</p>
                     </div>
                     <div className="student-name">
-                        <p className="font-weight-bold">{activeSlide?.student}</p>
+                        <p className="text-white">{activeSlide?.student}</p>
                     </div>
                 </div>
             </div>

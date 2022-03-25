@@ -4,7 +4,6 @@ import { useLocomotiveScroll } from 'react-locomotive-scroll'
 import shell from '../public/images/shell.png'
 import nautilus from '../public/images/nautilus.png'
 import mushroom from '../public/images/mushrooms.png'
-import birdofparadise from '../public/images/birdofparadise.png'
 import LogoTree from '@components/LogoTree'
 import octopus from '../public/images/octopus.png'
 import seahorseleft from '../public/images/seahorseleft.png'
@@ -18,6 +17,10 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import Quote1 from '@components/Quote1'
 import Quote2 from '@components/Quote2'
 import logo from '../public/images/logo.png'
+import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
+import ProcessSection from '@components/ProcessSection'
+import ServicesSection from '@components/ServicesSection'
+import birdofparadise from '../public/images/birdofparadise.png'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -77,12 +80,16 @@ export default function Home() {
     scroll && scroll.scrollTo("#about")
   }
 
-  const goToDifferent = () => {
-    scroll && scroll.scrollTo("#different", { duration: 1500 })
+  const goToServices = () => {
+    scroll && scroll.scrollTo("#services", { duration: 1500 })
   }
 
   const goToWhy = () => {
-    scroll && scroll.scrollTo("#why", { duration: 2000 })
+    scroll && scroll.scrollTo("#process", { duration: 2000 })
+  }
+
+  const goToTutors = () => {
+    scroll && scroll.scrollTo("#tutors")
   }
 
   const goToEnquiry = () => {
@@ -106,16 +113,17 @@ export default function Home() {
           <div className="header-navigation" data-scroll>
             <nav>
               <div className="nav-item" onClick={goToAbout}>Who We Are</div>
-              <div className="nav-item" onClick={goToDifferent}>Our Process</div>
-              <div className="nav-item" onClick={goToWhy}>Why Aletheia?</div>
-              <div className="nav-item" onClick={goToEnquiry}>Make an Enquiry</div>
+              <div className="nav-item" onClick={goToServices}>Our Services</div>
+              <div className="nav-item" onClick={goToWhy}>Our Process</div>
+              <div className="nav-item" onClick={goToTutors}>Our Tutors</div>
+              <div className="nav-item" onClick={goToEnquiry}>Enquiries</div>
             </nav>
           </div>
         </div>
 
         <div className="hero-image-container" data-scroll>
           <div className="hero-image" data-scroll data-scroll-speed="5">
-            <Image src={shell} priority />
+            <Image src={shell} alt="" priority />
           </div>
         </div>
 
@@ -126,147 +134,127 @@ export default function Home() {
       <section id="about">
         <div className="container">
 
-          <div data-scroll data-scroll-speed="3">
-            <p className="about-text large" data-scroll>
-              Aletheia is a highly selective community of doctoral-level educators, providing our students with a unique space in which academic research and tuition flourish symbiotically.
-              <br /><br />
-              Entwining our roots in the Oxbridge collegiate system with over a decade of tuition experience worldwide, we deliver a university environment for all students regardless of age.
+          <div className="about-section">
+            <p className="about-text text-left" data-scroll>
+              Aletheia's mission is to launch
+              energised and independent young
+              learners into the world. By opening the
+              doors to university-level topics for all,
+              regardless of age or ability, we buck
+              the trend of traditional private tuition.
             </p>
+            <div className="about-illustration octopus">
+              <div className="illustration right" data-scroll data-scroll-speed="3" data-scroll-offset="0,10%">
+                <div className="scale">
+                  <Image src={octopus} alt="" priority />
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="nautilus illustration right" data-scroll data-scroll-speed="6" data-scroll-offset="0,10%">
-            <div className="scale">
-              <Image src={nautilus} priority />
+          <div className="about-section">
+            <p className="about-text about-text-right" data-scroll>
+              From unravelling the universe's arrow of time
+              to exploring how Edo Period Japanese art has
+              shaped video game design, we use students'
+              own curiosity to create a teaching environment
+              in which rapid learning feels like play.
+            </p>
+            <div className="about-illustration butterfly">
+              <div className="illustration left" data-scroll data-scroll-speed="3" data-scroll-offset="0,10%">
+                <div className="scale">
+                  <Image src={butterfly} alt="" priority />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="about-section">
+            <p className="about-text text-left" data-scroll>
+              Drawing on the timeless Oxbridge tutorial
+              model, our interdisciplinary network of
+              PhD-level educators guides students to
+              the furthest reaches of their imagination.
+            </p>
+            <div className="about-illustration nautilus">
+              <div className="illustration right" data-scroll data-scroll-speed="3" data-scroll-offset="0,10%">
+                <div className="scale">
+                  <Image src={nautilus} alt="" priority />
+                </div>
+              </div>
             </div>
           </div>
 
         </div>
       </section>
 
-      <section id="services" className="text-left" data-scroll data-scroll-speed="2">
-        <div className="container">
+      <ServicesSection />
 
-          <div className="desktop-services">
-            <div className="overflow-hidden">
-              <h1 data-scroll className="fade-up">Our Services</h1>
-            </div>
-
-            <div className="line" data-scroll></div>
-            
-            <div className="services-header text-center">
-              <div className="overflow-hidden grid-3">
-                <h2 data-scroll>School<br/>Tuition</h2>
-                <h2 data-scroll>University<br/>Tuition</h2>
-                <h2 data-scroll>Mentoring &amp;<br/>Advice</h2>
-              </div>
-            </div>
-
-            <div className="line" data-scroll></div>
-
-            <div className="services-items text-center grid-3" data-scroll>
-              <div className="services-item fade-up" data-scroll>
-                <p>lower school (up to 16)</p>
-                <p>upper school (16+)</p>
-              </div>
-              <div className="services-item fade-up" data-scroll>
-                <p>undergraduate</p>
-                <p>postgraduate</p>
-              </div>
-              <div className="services-item fade-up" data-scroll>
-                <p>university applications</p>
-                <p>careers advice</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="mobile-services">
-            <h1 data-scroll className="fade-up">Our Services</h1>
-            <div className="mobile-service-item">
-              <h2 data-scroll>School Tuition</h2>
-              <div className="line" data-scroll></div>
-              <div className="services-item fade-up" data-scroll>
-                <p>lower school (up to 16)</p>
-                <p>upper school (16+)</p>
-              </div>
-            </div>
-            <div className="mobile-service-item">
-              <h2 data-scroll>University Tuition</h2>
-              <div className="line" data-scroll></div>
-              <div className="services-item fade-up" data-scroll>
-                <p>undergraduate</p>
-                <p>postgraduate</p>
-              </div>
-            </div>
-            <div className="mobile-service-item">
-              <h2 data-scroll>Mentoring &amp; Advice</h2>
-              <div className="line" data-scroll></div>
-              <div className="services-item fade-up" data-scroll>
-                <p>university applications</p>
-                <p>careers advice</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div className="bird-of-paradise illustration left" data-scroll data-scroll-speed="4" data-scroll-offset="0,10%">
-          <div className="scale">
-            <Image src={birdofparadise} priority />
-          </div>
-        </div>
-      </section>
-
-      <section id="tutors" data-scroll data-scroll-speed="2">
-        <div className="container">
-          <h1 data-scroll className="fade-up">Our Tutors</h1>
-          <TutorsSlider />
-        </div>
-      </section>
-
-      <div data-scroll data-scroll-call="cream-section" data-scroll-repeat data-scroll-offset="40%">
-
-        <section id="different" className="text-left">
-          <div className="container">
-
-            <div data-scroll>
-              <h1 className="fade-up" data-scroll data-scroll-offset="40%" >What makes us different?</h1>
-              <p className="different-text large text-dark fade-up delay-1" data-scroll data-scroll-offset="40%" >
-                We want to produce proactive young citizens of the world with a strong work ethic and carefully deliberated opinions.
-                <br /><br />
-                Regardless of the subject studied, we value interdisciplinary awareness and not myopic focus.
-                <br /><br />
-                At Aletheia, we believe academic honesty produces self-reliant, independent, and curious self-learners. Our job is to teach ourselves out of a job.
-              </p>
-            </div>
-
-            <div className="octopus illustration right" data-scroll data-scroll-speed="-2" data-scroll-offset="0,10%">
-              <div className="scale">
-                <Image src={octopus} priority />
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        <section id="quote-1" data-scroll data-scroll-speed="-1">
+      <section id="quote-1" data-scroll data-scroll-speed="-1">
           <div className="container">
 
             <div className="quote-1-container fade-up" data-scroll>
               <div className="quote-logo-container">
                 <div className="quote-logo"><LogoTree /></div>
               </div>
-              {/* <div className="quote qoute-1-text">
-                "To teach is to create a space in which obedience to truth is practiced."<br/>
-                — Parker Palmer
-              </div> */}
-              {/* <Image src={quote1} priority /> */}
               <Quote1 />
+            </div>
+
+            <div className="bird-of-paradise illustration right" data-scroll data-scroll-speed="4" data-scroll-offset="0,10%">
+              <div className="scale">
+                <Image src={birdofparadise} alt="" priority />
+              </div>
             </div>
 
           </div>
         </section>
 
-        <section id="ethos" className="text-right" data-scroll>
+      <ProcessSection />
+
+      <section id="tutors" data-scroll>
+        <div className="container">
+          <h1 data-scroll className="fade-up">Our Tutors</h1>
+          <TutorsSlider />
+        </div>
+      </section>
+
+      {/* <div data-scroll data-scroll-call="cream-section" data-scroll-repeat data-scroll-offset="40%"> */}
+
+        {/* <section id="mission" className="text-left">
+          <div className="container">
+
+            <div data-scroll>
+              <h1 className="fade-up" data-scroll data-scroll-offset="40%" >Our Mission</h1>
+              <p className="different-text large text-dark fade-up delay-1" data-scroll data-scroll-offset="40%" >
+                Aletheia's mission bucks the trend of traditional private tuition: to launch energised and independent young minds into the world.
+                <br/><br/>
+                Regardless of the subject studied, we value interdisciplinary awareness and not myopic focus. Our young and eclectic team of educators is able to guide students beyond the standard syllabus, to the furthest reaches of their imagination.
+              </p>
+            </div>
+
+            <div className="octopus illustration right" data-scroll data-scroll-speed="-2" data-scroll-offset="0,10%">
+              <div className="scale">
+                <Image src={octopus} alt="" priority />
+              </div>
+            </div>
+
+          </div>
+        </section> */}
+
+        {/* <section id="quote-1" data-scroll data-scroll-speed="-1">
+          <div className="container">
+
+            <div className="quote-1-container fade-up" data-scroll>
+              <div className="quote-logo-container">
+                <div className="quote-logo"><LogoTree /></div>
+              </div>
+              <Quote1 />
+            </div>
+
+          </div>
+        </section> */}
+
+        {/* <section id="ethos" className="text-right" data-scroll>
           <div className="container">
 
             <div className="overflow-hidden">
@@ -282,16 +270,16 @@ export default function Home() {
 
           <div className="mushroom illustration left" data-scroll data-scroll-speed="3" data-scroll-offset="0,10%">
             <div className="scale">
-              <Image src={mushroom} priority />
+              <Image src={mushroom} alt="" priority />
             </div>
           </div>
 
-        </section>
+        </section> */}
 
-        <section id="process" className="text-left text-dark" data-scroll>
+        {/* <section id="philosophy" className="text-left text-dark" data-scroll>
           <div className="container">
 
-            <h1 className="fade-up" data-scroll>Our Process</h1>
+            <h1 className="fade-up" data-scroll>Our Philosophy</h1>
 
             <div className="process-item fade-up" data-scroll>
               <p className="process-number">1</p>
@@ -322,53 +310,47 @@ export default function Home() {
 
           <div className="pineapple illustration right" data-scroll data-scroll-speed="7" data-scroll-offset="0,10%">
             <div className="scale">
-              <Image src={pineapple} priority />
+              <Image src={pineapple} alt="" priority />
             </div>
           </div>
-        </section>
+        </section> */}
 
-      </div>{/* end cream section */}
+      {/* </div> */}
+
+      {/* - - - - - - - end cream section */}
 
       <section id="quote-2">
         <div className="container">
-
             <div className="quote-2-container fade-up" data-scroll>
               <div className="quote-logo-container">
                 <div className="quote-logo"><LogoTree /></div>
               </div>
-              {/* <div className="quote quote-2-text">
-              “Man is all symmetrie, Full of proportions, one limbe to another, And all to all the world besides: Each part may call the farthest, brother: For head with foot hath private amitie, And both with moons and tides.”<br/>
-              - George Herbert, The Temple
-              </div> */}
-              {/* <Image src={quote2} priority /> */}
               <Quote2 />
             </div>
-
-            <div className="seahorse-left illustration left" data-scroll data-scroll-speed="6" data-scroll-offset="0,10%">
+            <div className="seahorse-2 illustration left" data-scroll data-scroll-speed="6" data-scroll-offset="0,10%">
               <div className="scale">
-                <Image src={seahorseleft} priority />
+                <Image src={seahorseleft} alt="" priority />
               </div>
             </div>
-
         </div>
       </section>
 
-      <section id="why" className="text-left">
+      {/* <section id="why" className="text-left">
         <div className="container">
 
-          <h1 className="why-title fade-up" data-scroll>Why Choose Aletheia?</h1>
+          <h1 className="why-title fade-up" data-scroll>What Makes Us Different?</h1>
           <p className="why-para fade-up delay-1" data-scroll>Everyone on our team is an <strong>expert</strong> in their field — whether it be ancient history, astrophysics, or artificial intelligence.</p>
           <p className="why-para fade-up delay-1" data-scroll>Our tutoring service is <strong>bespoke</strong> and constantly evolving, guided by our students' own curiosity and not the strictures of a standard syllabus.</p>
           <p className="why-para fade-up delay-1" data-scroll>You will study in a truly <strong>interdisciplinary</strong> environment, where the possibilities of your learning journey are supported by our team's mixed and complementary backgrounds.</p>
 
           <div className="butterfly illustration right" data-scroll data-scroll-speed="-4" data-scroll-offset="0,10%">
             <div className="scale">
-              <Image src={butterfly} priority />
+              <Image src={butterfly} alt="" priority />
             </div>
           </div>
 
         </div>
-      </section>
+      </section> */}
 
       <section id="testimonials" data-scroll>
         <div className="container" data-scroll>
@@ -388,10 +370,21 @@ export default function Home() {
 
           <div className="nautilus-2 illustration left" data-scroll data-scroll-speed="4" data-scroll-offset="0,10%">
             <div className="scale">
-              <Image src={nautilus} priority />
+              <Image src={nautilus} alt="" priority />
             </div>
           </div>
 
+        </div>
+      </section>
+
+      <section id="join">
+        <div className="container">
+          <h1 className="fade-up" data-scroll>Become a Tutor</h1>
+          <p className="large fade-up" data-scroll>
+            Interested in adding your field of expertise to Aletheia's teaching programme?
+            <br/><br/>
+            If you feel inclined to inspire, please don't hesitate to contact us at <a className="text-gold" href="mailto:info@aletheia-tutors.ch" target="_blank" rel="noreferrer">info@aletheia-tutors.ch</a>.
+          </p>
         </div>
       </section>
 
