@@ -438,7 +438,7 @@ nav {
 }
 
 .services-header.open svg {
-  transform: rotate(180deg);
+  transform: rotateX(180deg);
 }
 
 .services-header h2 {
@@ -457,7 +457,7 @@ nav {
 .services-items {
   max-height: 0;
   overflow: hidden;
-  transition: all 1.2s var(--ease);
+  transition: all 0.8s ease;
 }
 
 .services-items.open {
@@ -809,8 +809,8 @@ nav {
 .nautilus-2 {
   position: absolute;
   width: 750px;
-  left: -15%;
-  top: -25%;
+  right: -5%;
+  top: -50%;
 }
 
 /* Enquiry Form
@@ -937,6 +937,11 @@ button.secondary {
 button.secondary:hover {
   background: var(--cream);
   color: var(--dark-green)
+}
+
+button svg {
+  vertical-align: text-top;
+  margin-left: 6px;
 }
 
 .span-2 {

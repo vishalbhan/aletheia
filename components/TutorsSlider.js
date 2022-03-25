@@ -100,7 +100,7 @@ export default function TutorsSlider() {
 						</div>
 					</div>
 					<div className="tutor-details">
-						<div className="tutor-name">{activeSlide?.name}</div>
+						<div className="tutor-name text-white">{activeSlide?.name}</div>
 						<div className="tutor-qualification"><em>{activeSlide?.qualification}</em></div>
 					</div>
 				</div>

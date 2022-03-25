@@ -20,7 +20,7 @@ export default function ServicesItem({ title, items }) {
       <div className={`services-items text-left grid-2 ${open ? 'open' : ''}`} data-scroll data-scroll-offset="0,10%">
         {
           items.map(item => (
-            <div className="services-item fade-up" data-scroll data-scroll-offset="0,10%">
+            <div className="services-item fade-up" data-scroll data-scroll-offset="0,10%" key={`key-${item.title}`}>
               <p className="text-white">{item.title}</p>
               <div className="line" data-scroll data-scroll-offset="0,10%"></div>
               <p className="sm">{item.description}</p>

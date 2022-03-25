@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { BsArrowRight } from 'react-icons/bs';
 
 export default function EnquiryForm() {
 
@@ -85,7 +86,7 @@ export default function EnquiryForm() {
                     formStatus === 'sent' ? (
                         <p>Enquiry received, we'll be in touch soon!</p>
                     ) : (
-                        <button>Send Enquiry</button>
+                        <button>Send Enquiry <BsArrowRight /></button>
                     )
                 }
             </div>
