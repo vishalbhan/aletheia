@@ -81,7 +81,6 @@ h2 {
   letter-spacing: 1.2px;
   line-height: 150%;
   text-transform: uppercase;
-  color: #fff;
 }
 
 p.sm {
@@ -203,6 +202,14 @@ button {
   color: var(--golden);
 }
 
+.text-cream {
+  color: var(--cream);
+}
+
+.text-white {
+  color: #fff;
+}
+
 /* Common to sections */
 
 section {
@@ -319,32 +326,71 @@ nav {
 
 .hero-image-container {
   position: absolute;
-  top: 100px;
+  top: 160px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .hero-image {
-  width: 480px;
+  width: 400px;
   opacity: 0;
   transition: width 1.5s var(--ease), opacity 1.5s linear;
 }
 
 .hero-image.in-view {
-  width: 600px;
+  width: 520px;
   opacity: 1;
 }
 
+.about-section {
+  position: relative;
+  padding: 250px 0;
+}
+
+.about-section:last-child {
+  margin-bottom: 300px;
+}
+
+.about-illustration.octopus {
+  position: absolute;
+  width: 900px;
+  top: 0;
+  right: -30%;
+}
+
+.about-illustration.butterfly {
+  position: absolute;
+  width: 750px;
+  top: 10%;
+  left: -20%;
+  opacity: 0.4;
+}
+
+.about-illustration.nautilus {
+  position: absolute;
+  width: 800px;
+  top: 15%;
+  right: -30%;
+}
+
+/* About Section
+************************************************************/
+
 .about-text {
-  padding: 150px 0;
-  max-width: 760px;
-  margin: 0 auto;
+  max-width: 540px;
+  font-size: 28px;
   opacity: 0;
   transition: opacity 0.8s ease;
+  line-height: 165%;
 }
 
 .about-text.in-view {
   opacity: 1;
+}
+
+.about-text-right {
+  margin-left: auto;
+  text-align: right;
 }
 
 .nautilus {
@@ -353,6 +399,9 @@ nav {
   left: 50%;
   top: 30%;
 }
+
+/* Services Section
+************************************************************/
 
 #services {
   margin-top: -200px;
@@ -370,6 +419,28 @@ nav {
   top: 20%;
 }
 
+.services-header {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 40px;
+  transition: all 0.9s ease;
+}
+
+.services-header:hover,
+.services-header.open {
+  background: #EAE5D210;
+}
+
+.services-header svg {
+  transition: all 0.9s ease;
+}
+
+.services-header.open svg {
+  transform: rotate(180deg);
+}
+
 .services-header h2 {
   opacity: 0;
   visibility: hidden;
@@ -384,7 +455,25 @@ nav {
 }
 
 .services-items {
-  padding: 60px 100px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 1.2s var(--ease);
+}
+
+.services-items.open {
+  max-height: 800px;
+}
+
+.services-item {
+  padding: 40px 40px 80px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.services-items.open .services-item {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .services-item p {
@@ -398,13 +487,72 @@ nav {
 
 .bird-of-paradise {
   position: absolute;
-  bottom: -10%;
-  right: -16vw;
+  bottom: -30%;
+  right: -5vw;
   width: 45vw;
 }
 
+/* Process Section
+************************************************************/
+
+#process {
+  padding: 150px 0;
+  margin: 100px 0;
+}
+
+.process-cards {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  cursor: grab;
+}
+
+.process-card {
+  position: relative;
+  flex: 1 0 100%;
+  height: 576px;
+  display: grid;
+  place-items: center;
+  background: #EAE5D220;
+  padding: 120px 80px;
+  margin-right: 80px;
+}
+
+.process-card p {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.process-card:after {
+  content: '';
+  z-index: 1;
+  display: block;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  bottom: 24px;
+  right: 24px;
+  border: 1px solid #EAE5D250;
+}
+
+.process-card-title {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+}
+
+.process-icon {
+  margin-right: 80px;
+}
+
+/* Tutors Section
+************************************************************/
+
 #tutors {
-  margin-bottom: 100px;
+  padding: 100px 0;
+  margin: 150px 0;
 }
 
 .tutors-slider-card {
@@ -512,12 +660,12 @@ nav {
   max-width: 660px;
 }
 
-.octopus {
+/* .octopus {
   width: 1000px;
   position: absolute;
   bottom: -50%;
   right: -20%;
-}
+} */
 
 #quote-1 {
   min-height: 0;
@@ -567,10 +715,11 @@ nav {
 }
 
 .pineapple {
-  width: 420px;
+  width: 400px;
   position: absolute;
-  right: 5%;
-  bottom: 10%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .quote-2-container {
@@ -583,53 +732,7 @@ nav {
   width: 420px;
   position: absolute;
   left: 5%;
-  bottom: 30%;
-}
-
-#process {
-  height: 140vh;
-  padding: 150px 0;
-  margin-bottom: 400px;
-}
-
-.process-cards {
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-
-.process-card {
-  position: relative;
-  flex: 1 0 600px;
-  height: 576px;
-  display: grid;
-  place-items: center;
-  background: #EAE5D220;
-  padding: 120px 80px;
-  margin-right: 80px;
-}
-
-.process-card:after {
-  content: '';
-  z-index: 1;
-  display: block;
-  position: absolute;
-  top: 24px;
-  left: 24px;
-  bottom: 24px;
-  right: 24px;
-  border: 1px solid #EAE5D250;
-}
-
-.process-card-title {
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.process-icon {
-  margin-right: 80px;
+  bottom: 10%;
 }
 
 #why {
@@ -645,13 +748,13 @@ nav {
   margin-bottom: 50px;
 }
 
-.butterfly {
+/* .butterfly {
   width: 900px;
   position: absolute;
   top: 20%;
   right: -20%;
   opacity: 0.6;
-}
+} */
 
 .testimonial-card {
   position: relative;
@@ -926,10 +1029,6 @@ R E S P O N S I V E
 
   #hero {
     height: 100vh;
-  }
-
-  .hero-inage-container {
-    top: 180px;
   }
 
   .hero-image {
