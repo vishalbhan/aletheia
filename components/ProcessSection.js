@@ -46,7 +46,7 @@ export default function ProcessSection() {
             <div className="embla__container process-cards">
               {
                 processItems.map((item, index) => (
-                  <div className="embla__slide process-card">
+                  <div className="embla__slide process-card" key={`process-${index}`}>
                     <h2 className="process-card-title">{`${index+1}. ${item.title}`}</h2>
                     <p className="large">{item.description}</p>
                   </div>
