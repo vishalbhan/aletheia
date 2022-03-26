@@ -197,7 +197,7 @@ export default function Home() {
         <div className="container">
             <div className="quote-2-container">
               <div className="quote-logo-container" data-scroll>
-                <div className="quote-logo fade-up" data-scroll data-scroll-offset="60%"><LogoTree /></div>
+                <div className="quote-logo fade-up" data-scroll data-scroll-offset="60%" data-scroll-repeat={true}><LogoTree /></div>
               </div>
               <Quote2 />
             </div>
@@ -355,6 +355,12 @@ export default function Home() {
         <div className="container" data-scroll>
           <h1 className="fade-up" data-scroll>Student Testimonials</h1>
           <TestimonialSlider />
+        </div>
+
+        <div className="mushroom illustration left" data-scroll data-scroll-speed="3" data-scroll-offset="0,10%">
+          <div className="scale">
+            <Image src={mushroom} alt="" priority />
+          </div>
         </div>
       </section>
 

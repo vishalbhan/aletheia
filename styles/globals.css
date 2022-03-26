@@ -648,6 +648,13 @@ section#process {
   color: var(--golden);
 }
 
+/* Testimonials Section
+************************************************************/
+
+#testimonials {
+  padding: 200px 0 100px;
+}
+
 .cream-section {
   padding: 100px 0 0;
   margin-bottom: 200px;
@@ -692,8 +699,8 @@ section#process {
 .mushroom {
   width: 1000px;
   position: absolute;
-  left: -20%;
-  bottom: -20%;
+  left: -10%;
+  top: -20%;
 }
 
 .process-item {
@@ -812,7 +819,7 @@ section#process {
   position: absolute;
   width: 750px;
   right: -5%;
-  top: -50%;
+  top: -30%;
 }
 
 /* Enquiry Form
