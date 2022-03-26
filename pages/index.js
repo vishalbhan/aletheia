@@ -16,6 +16,7 @@ import gsap from 'gsap/dist/gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import Quote1 from '@components/Quote1'
 import Quote2 from '@components/Quote2'
+import Quote3 from '@components/Quote3'
 import logo from '../public/images/logo.png'
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 import ProcessSection from '@components/ProcessSection'
@@ -199,7 +200,7 @@ export default function Home() {
               <div className="quote-logo-container" data-scroll>
                 <div className="quote-logo fade-up" data-scroll data-scroll-offset="60%" data-scroll-repeat={true}><LogoTree /></div>
               </div>
-              <Quote2 />
+              <Quote3 />
             </div>
             <div className="seahorse-2 illustration left" data-scroll data-scroll-speed="6" data-scroll-offset="0,10%">
               <div className="scale">
@@ -351,16 +352,26 @@ export default function Home() {
         </div>
       </section> */}
 
+        <section id="quote-3">
+          <div className="container">
+              <div className="quote-2-container fade-up" data-scroll data-scroll-offset="50%" data-scroll-repeat={true}>
+                <div className="quote-logo-container">
+                  <div className="quote-logo"><LogoTree /></div>
+                </div>
+                <Quote2 />
+              </div>
+              <div className="mushroom illustration left" data-scroll data-scroll-speed="6" data-scroll-offset="0,10%">
+                <div className="scale">
+                  <Image src={mushroom} alt="" priority />
+                </div>
+              </div>
+          </div>
+        </section>
+
       <section id="testimonials" data-scroll>
         <div className="container" data-scroll>
           <h1 className="fade-up" data-scroll>Student Testimonials</h1>
           <TestimonialSlider />
-        </div>
-
-        <div className="mushroom illustration left" data-scroll data-scroll-speed="3" data-scroll-offset="0,10%">
-          <div className="scale">
-            <Image src={mushroom} alt="" priority />
-          </div>
         </div>
       </section>
 

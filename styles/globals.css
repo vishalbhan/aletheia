@@ -554,7 +554,6 @@ section#process {
 
 #tutors {
   padding: 100px 0;
-  margin: 150px 0;
 }
 
 .tutors-slider-card {
@@ -648,13 +647,6 @@ section#process {
   color: var(--golden);
 }
 
-/* Testimonials Section
-************************************************************/
-
-#testimonials {
-  padding: 200px 0 100px;
-}
-
 .cream-section {
   padding: 100px 0 0;
   margin-bottom: 200px;
@@ -696,11 +688,16 @@ section#process {
   margin-left: auto;
 }
 
+#quote-3 {
+  min-height: 0;
+  padding: 100px 0 200px;
+}
+
 .mushroom {
   width: 1000px;
   position: absolute;
-  left: -10%;
-  top: -20%;
+  left: -20%;
+  top: -10%;
 }
 
 .process-item {
@@ -732,7 +729,7 @@ section#process {
 }
 
 .quote-2-container {
-  max-width: 660px;
+  max-width: 720px;
   text-align: right;
   margin-left: auto;
 }
@@ -819,7 +816,7 @@ section#process {
   position: absolute;
   width: 750px;
   right: -5%;
-  top: -30%;
+  top: -40%;
 }
 
 /* Enquiry Form
