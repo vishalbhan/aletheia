@@ -131,199 +131,73 @@ export default function Home() {
 
       </section>
 
-      <section id="about">
-        <div className="container">
+      <div className="cream-section" data-scroll data-scroll-call="cream-section" data-scroll-repeat data-scroll-offset="40%">
 
-          <div className="about-section">
-            <p className="about-text text-left" data-scroll>
-              Aletheia's mission is to launch
-              energised and independent young
-              learners into the world. By opening the
-              doors to university-level topics for all,
-              regardless of age or ability, we buck
-              the trend of traditional private tuition.
-            </p>
-            <div className="about-illustration octopus">
-              <div className="illustration right" data-scroll data-scroll-speed="3" data-scroll-offset="0,10%">
-                <div className="scale">
-                  <Image src={octopus} alt="" priority />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="about-section">
-            <p className="about-text about-text-right" data-scroll>
-              From unravelling the universe's arrow of time
-              to exploring how Edo Period Japanese art has
-              shaped video game design, we use students'
-              own curiosity to create a teaching environment
-              in which rapid learning feels like play.
-            </p>
-            <div className="about-illustration butterfly">
-              <div className="illustration left" data-scroll data-scroll-speed="3" data-scroll-offset="0,10%">
-                <div className="scale">
-                  <Image src={butterfly} alt="" priority />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="about-section">
-            <p className="about-text text-left" data-scroll>
-              Drawing on the timeless Oxbridge tutorial
-              model, our interdisciplinary network of
-              PhD-level educators guides students to
-              the furthest reaches of their imagination.
-            </p>
-            <div className="about-illustration nautilus">
-              <div className="illustration right" data-scroll data-scroll-speed="3" data-scroll-offset="0,10%">
-                <div className="scale">
-                  <Image src={nautilus} alt="" priority />
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <ServicesSection />
-
-      <section id="quote-1" data-scroll data-scroll-speed="-1">
+        <section id="about">
           <div className="container">
 
-            <div className="quote-1-container fade-up" data-scroll>
-              <div className="quote-logo-container">
-                <div className="quote-logo"><LogoTree /></div>
+            <div className="about-section">
+              <p className="about-text text-left" data-scroll>
+                Aletheia's mission is to launch
+                energised and independent young
+                learners into the world. By opening the
+                doors to university-level topics for all,
+                regardless of age or ability, we buck
+                the trend of traditional private tuition.
+              </p>
+              <div className="about-illustration octopus">
+                <div className="illustration right" data-scroll data-scroll-speed="3" data-scroll-offset="0,10%">
+                  <div className="scale">
+                    <Image src={octopus} alt="" priority />
+                  </div>
+                </div>
               </div>
-              <Quote1 />
             </div>
 
-            <div className="bird-of-paradise illustration right" data-scroll data-scroll-speed="4" data-scroll-offset="0,10%">
-              <div className="scale">
-                <Image src={birdofparadise} alt="" priority />
+            <div className="about-section">
+              <p className="about-text about-text-right" data-scroll>
+                From unravelling the universe's arrow of time
+                to exploring how Edo Period Japanese art has
+                shaped video game design, we use students'
+                own curiosity to create a teaching environment
+                in which rapid learning feels like play.
+              </p>
+              <div className="about-illustration butterfly">
+                <div className="illustration left" data-scroll data-scroll-speed="3" data-scroll-offset="0,10%">
+                  <div className="scale">
+                    <Image src={butterfly} alt="" priority />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="about-section">
+              <p className="about-text text-left" data-scroll>
+                Drawing on the timeless Oxbridge tutorial
+                model, our interdisciplinary network of
+                PhD-level educators guides students to
+                the furthest reaches of their imagination.
+              </p>
+              <div className="about-illustration nautilus">
+                <div className="illustration right" data-scroll data-scroll-speed="3" data-scroll-offset="0,10%">
+                  <div className="scale">
+                    <Image src={nautilus} alt="" priority />
+                  </div>
+                </div>
               </div>
             </div>
 
           </div>
         </section>
 
-      <ProcessSection />
-
-      <section id="tutors" data-scroll>
-        <div className="container">
-          <h1 data-scroll className="fade-up">Our Tutors</h1>
-          <TutorsSlider />
-        </div>
-      </section>
-
-      {/* <div data-scroll data-scroll-call="cream-section" data-scroll-repeat data-scroll-offset="40%"> */}
-
-        {/* <section id="mission" className="text-left">
-          <div className="container">
-
-            <div data-scroll>
-              <h1 className="fade-up" data-scroll data-scroll-offset="40%" >Our Mission</h1>
-              <p className="different-text large text-dark fade-up delay-1" data-scroll data-scroll-offset="40%" >
-                Aletheia's mission bucks the trend of traditional private tuition: to launch energised and independent young minds into the world.
-                <br/><br/>
-                Regardless of the subject studied, we value interdisciplinary awareness and not myopic focus. Our young and eclectic team of educators is able to guide students beyond the standard syllabus, to the furthest reaches of their imagination.
-              </p>
-            </div>
-
-            <div className="octopus illustration right" data-scroll data-scroll-speed="-2" data-scroll-offset="0,10%">
-              <div className="scale">
-                <Image src={octopus} alt="" priority />
-              </div>
-            </div>
-
-          </div>
-        </section> */}
-
-        {/* <section id="quote-1" data-scroll data-scroll-speed="-1">
-          <div className="container">
-
-            <div className="quote-1-container fade-up" data-scroll>
-              <div className="quote-logo-container">
-                <div className="quote-logo"><LogoTree /></div>
-              </div>
-              <Quote1 />
-            </div>
-
-          </div>
-        </section> */}
-
-        {/* <section id="ethos" className="text-right" data-scroll>
-          <div className="container">
-
-            <div className="overflow-hidden">
-              <h1 className="fade-up" data-scroll>Our Ethos</h1>
-              <p className="ethos-text fade-up large text-dark delay-1" data-scroll>
-                Nothing we do in life can truly be boxed-off and isolated. Much like our planet, each individual is a complex ecosystem of processes, which must be balanced in order to be sustained.
-                <br/><br/>
-                Harmonising our students’ wider lives is as integral to our educational strategy as academia itself. Whether on the sports field or the yoga mat, in the dojo or amongst the stars, our emphasis on extra-curricular activity keeps our students in a continuous state of learning.
-              </p>
-            </div>
-
-          </div>
-
-          <div className="mushroom illustration left" data-scroll data-scroll-speed="3" data-scroll-offset="0,10%">
-            <div className="scale">
-              <Image src={mushroom} alt="" priority />
-            </div>
-          </div>
-
-        </section> */}
-
-        {/* <section id="philosophy" className="text-left text-dark" data-scroll>
-          <div className="container">
-
-            <h1 className="fade-up" data-scroll>Our Philosophy</h1>
-
-            <div className="process-item fade-up" data-scroll>
-              <p className="process-number">1</p>
-              <p className="process-text" data-scroll data-scroll-delay="0.10">We empower our students to navigate their own journey through the knowledge of our tutoring team. Our starting point is whatever already fans their curiousity, ignites their creativity, or sparks joy.</p>
-            </div>
-
-            <div className="process-item fade-up" data-scroll>
-              <p className="process-number">2</p>
-              <p className="process-text" data-scroll data-scroll-delay="0.10">Establishing a strong chemistry between tutor and tutee based on shared interests is vital. If the alignment is right, we provide our students with a platform for learning that can take them to the farthest reaches of their imagination.</p>
-            </div>
-
-            <div className="process-item fade-up" data-scroll>
-              <p className="process-number">3</p>
-              <p className="process-text" data-scroll data-scroll-delay="0.10">Whether the quest is to understand the ‘arrow of time’, the role of AI in evolutionary biology, or the influence of 19th century Japanese woodblock prints on contemporary manga, we harness students’ existing knowledge in a teaching environment where rapid learning feels like play.</p>
-            </div>
-
-            <div className="process-item fade-up" data-scroll>
-              <p className="process-number">4</p>
-              <p className="process-text" data-scroll data-scroll-delay="0.10">Our experience and our results testify to the importance of recapturing the spirit of adventure and immersion when learning. In this state of flow the mind is at its zenith, able to absorb, retain, and produce knowledge most readily.</p>
-            </div>
-
-            <div className="process-item fade-up" data-scroll>
-              <p className="process-number">5</p>
-              <p className="process-text" data-scroll data-scroll-delay="0.10">At Aletheia this cuts both ways; educators and students learn from one another and flourish. Our philosophy, based on over a decade of teaching experience, is that academic performance is an adjunct to  learning, not an end in itself.</p>
-            </div>
-
-          </div>
-
-          <div className="pineapple illustration right" data-scroll data-scroll-speed="7" data-scroll-offset="0,10%">
-            <div className="scale">
-              <Image src={pineapple} alt="" priority />
-            </div>
-          </div>
-        </section> */}
-
-      {/* </div> */}
-
+      </div> 
       {/* - - - - - - - end cream section */}
 
       <section id="quote-2">
         <div className="container">
-            <div className="quote-2-container fade-up" data-scroll>
-              <div className="quote-logo-container">
-                <div className="quote-logo"><LogoTree /></div>
+            <div className="quote-2-container">
+              <div className="quote-logo-container" data-scroll>
+                <div className="quote-logo fade-up" data-scroll data-scroll-offset="60%"><LogoTree /></div>
               </div>
               <Quote2 />
             </div>
@@ -334,6 +208,131 @@ export default function Home() {
             </div>
         </div>
       </section>
+
+      <ServicesSection />
+
+      <ProcessSection />
+
+      <section id="quote-1" data-scroll>
+        <div className="container">
+
+          <div className="quote-1-container fade-up" data-scroll data-scroll-offset="20%">
+            <div className="quote-logo-container">
+              <div className="quote-logo"><LogoTree /></div>
+            </div>
+            <Quote1 />
+          </div>
+
+          <div className="bird-of-paradise illustration right" data-scroll data-scroll-speed="3" data-scroll-offset="0%">
+            <div className="scale">
+              <Image src={birdofparadise} alt="" priority />
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="tutors" data-scroll>
+        <div className="container">
+          <h1 data-scroll className="fade-up">Our Tutors</h1>
+          <TutorsSlider />
+        </div>
+      </section>
+
+      {/* <section id="mission" className="text-left">
+        <div className="container">
+
+          <div data-scroll>
+            <h1 className="fade-up" data-scroll data-scroll-offset="40%" >Our Mission</h1>
+            <p className="different-text large text-dark fade-up delay-1" data-scroll data-scroll-offset="40%" >
+              Aletheia's mission bucks the trend of traditional private tuition: to launch energised and independent young minds into the world.
+              <br/><br/>
+              Regardless of the subject studied, we value interdisciplinary awareness and not myopic focus. Our young and eclectic team of educators is able to guide students beyond the standard syllabus, to the furthest reaches of their imagination.
+            </p>
+          </div>
+
+          <div className="octopus illustration right" data-scroll data-scroll-speed="-2" data-scroll-offset="0,10%">
+            <div className="scale">
+              <Image src={octopus} alt="" priority />
+            </div>
+          </div>
+
+        </div>
+      </section> */}
+
+      {/* <section id="quote-1" data-scroll data-scroll-speed="-1">
+        <div className="container">
+
+          <div className="quote-1-container fade-up" data-scroll>
+            <div className="quote-logo-container">
+              <div className="quote-logo"><LogoTree /></div>
+            </div>
+            <Quote1 />
+          </div>
+
+        </div>
+      </section> */}
+
+      {/* <section id="ethos" className="text-right" data-scroll>
+        <div className="container">
+
+          <div className="overflow-hidden">
+            <h1 className="fade-up" data-scroll>Our Ethos</h1>
+            <p className="ethos-text fade-up large text-dark delay-1" data-scroll>
+              Nothing we do in life can truly be boxed-off and isolated. Much like our planet, each individual is a complex ecosystem of processes, which must be balanced in order to be sustained.
+              <br/><br/>
+              Harmonising our students’ wider lives is as integral to our educational strategy as academia itself. Whether on the sports field or the yoga mat, in the dojo or amongst the stars, our emphasis on extra-curricular activity keeps our students in a continuous state of learning.
+            </p>
+          </div>
+
+        </div>
+
+        <div className="mushroom illustration left" data-scroll data-scroll-speed="3" data-scroll-offset="0,10%">
+          <div className="scale">
+            <Image src={mushroom} alt="" priority />
+          </div>
+        </div>
+
+      </section> */}
+
+      {/* <section id="philosophy" className="text-left text-dark" data-scroll>
+        <div className="container">
+
+          <h1 className="fade-up" data-scroll>Our Philosophy</h1>
+
+          <div className="process-item fade-up" data-scroll>
+            <p className="process-number">1</p>
+            <p className="process-text" data-scroll data-scroll-delay="0.10">We empower our students to navigate their own journey through the knowledge of our tutoring team. Our starting point is whatever already fans their curiousity, ignites their creativity, or sparks joy.</p>
+          </div>
+
+          <div className="process-item fade-up" data-scroll>
+            <p className="process-number">2</p>
+            <p className="process-text" data-scroll data-scroll-delay="0.10">Establishing a strong chemistry between tutor and tutee based on shared interests is vital. If the alignment is right, we provide our students with a platform for learning that can take them to the farthest reaches of their imagination.</p>
+          </div>
+
+          <div className="process-item fade-up" data-scroll>
+            <p className="process-number">3</p>
+            <p className="process-text" data-scroll data-scroll-delay="0.10">Whether the quest is to understand the ‘arrow of time’, the role of AI in evolutionary biology, or the influence of 19th century Japanese woodblock prints on contemporary manga, we harness students’ existing knowledge in a teaching environment where rapid learning feels like play.</p>
+          </div>
+
+          <div className="process-item fade-up" data-scroll>
+            <p className="process-number">4</p>
+            <p className="process-text" data-scroll data-scroll-delay="0.10">Our experience and our results testify to the importance of recapturing the spirit of adventure and immersion when learning. In this state of flow the mind is at its zenith, able to absorb, retain, and produce knowledge most readily.</p>
+          </div>
+
+          <div className="process-item fade-up" data-scroll>
+            <p className="process-number">5</p>
+            <p className="process-text" data-scroll data-scroll-delay="0.10">At Aletheia this cuts both ways; educators and students learn from one another and flourish. Our philosophy, based on over a decade of teaching experience, is that academic performance is an adjunct to  learning, not an end in itself.</p>
+          </div>
+
+        </div>
+
+        <div className="pineapple illustration right" data-scroll data-scroll-speed="7" data-scroll-offset="0,10%">
+          <div className="scale">
+            <Image src={pineapple} alt="" priority />
+          </div>
+        </div>
+      </section> */}
 
       {/* <section id="why" className="text-left">
         <div className="container">

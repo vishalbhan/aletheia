@@ -326,7 +326,7 @@ nav {
 
 .hero-image-container {
   position: absolute;
-  top: 160px;
+  top: 140px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -338,7 +338,7 @@ nav {
 }
 
 .hero-image.in-view {
-  width: 520px;
+  width: 580px;
   opacity: 1;
 }
 
@@ -382,6 +382,7 @@ nav {
   opacity: 0;
   transition: opacity 0.8s ease;
   line-height: 165%;
+  color: var(--dark-green);
 }
 
 .about-text.in-view {
@@ -487,7 +488,7 @@ nav {
 
 .bird-of-paradise {
   position: absolute;
-  bottom: -30%;
+  top: 30%;
   right: -5vw;
   width: 45vw;
 }
@@ -495,8 +496,9 @@ nav {
 /* Process Section
 ************************************************************/
 
-#process {
-  padding: 150px 0;
+section#process {
+  min-height: 0;
+  padding: 0;
   margin: 100px 0;
 }
 
@@ -647,8 +649,8 @@ nav {
 }
 
 .cream-section {
-  padding: 100px 0;
-  margin-bottom: 100px;
+  padding: 100px 0 0;
+  margin-bottom: 200px;
 }
 
 #mission {
@@ -718,7 +720,7 @@ nav {
   width: 400px;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 45%;
   transform: translate(-50%, -50%);
 }
 

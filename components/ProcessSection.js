@@ -61,7 +61,7 @@ export default function ProcessSection() {
         </div>
       </div>
 
-      <div className="pineapple" data-scroll>
+      <div className="pineapple illustration" data-scroll>
         <div data-scroll data-scroll-speed="5" data-scroll-offset="0,10%">
           <div className="scale">
             <Image src={pineapple} alt="" priority />
