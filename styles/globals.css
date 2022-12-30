@@ -634,6 +634,7 @@ nav {
 
 .illustration {
   z-index: 0;
+  pointer-events: none;
 }
 
 .illustration.right {
