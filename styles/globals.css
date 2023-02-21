@@ -313,7 +313,7 @@ nav {
   color: var(--golden);
   text-transform: uppercase;
   letter-spacing: 3.2px;
-  padding: 30px 60px;
+  padding: 24px 40px;
   border: 1px solid #EAE5D220;
   cursor: pointer;
   transition: 0.5s ease;
@@ -720,12 +720,19 @@ section#process {
   margin-right: 20%;
 }
 
-.pineapple {
+/* .pineapple {
   width: 400px;
   position: absolute;
   left: 50%;
   top: 45%;
   transform: translate(-50%, -50%);
+} */
+
+.pineapple {
+  width: 400px;
+  position: absolute;
+  top: -20%;
+  right: 5%;
 }
 
 .quote-2-container {
