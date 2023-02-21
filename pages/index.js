@@ -367,7 +367,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="testimonials" data-scroll>
+      <section id="testimonials" className="place-items-center" data-scroll>
         <div className="container" data-scroll>
           <h1 className="fade-up" data-scroll>Student Testimonials</h1>
           <TestimonialSlider />
