@@ -17,13 +17,13 @@ export default function TutorsSlider() {
 			imgName: 'andreas',
 			name: 'Dr. Andreas Stradis',
 			qualification: 'PhD MSc MA (Oxon)',
-			about: 'Andreas read English Literature at Magdalen College, Oxford, before going on to complete his MA in International Relations at the LSE. He won an AHRC scholarship for his PhD at the University of Bristol, balancing research with service as an officer in the British Army Reserve. He then spent two years in government on the Civil Service Fast Stream and a year at Barclays Bank before deciding to pursue teaching full-time. His continues his own research in Art History at the University of Zürich whilst completing Yoga Teacher Training.'
+			about: 'Andreas read English Literature at Magdalen College, Oxford, before going on to complete his MA in International Relations at the LSE. He won an AHRC scholarship for his PhD at the University of Bristol, balancing research with service as an officer in the British Army Reserve. He then spent two years in government on the Civil Service Fast Stream and a year at Barclays Bank before deciding to pursue teaching full-time. In 2021 he became an RYS accredited yoga instructor, and continues his own research in Art History and English Literature at the University of Zürich.'
 		},
 		{
 			imgName: 'athamos',
 			name: 'Dr. Athamos Stradis',
 			qualification: 'PhD BPhil (Oxon) MSci',
-			about: "After studying astrophysics at UCL, Athamos gravitated towards the philosophical questions of science, going on to study them at Oriel College, Oxford. Athamos completed his PhD on the 'arrow of time' at King's College London, where he won the King’s Teaching Excellence Award and the Jacobsen Prize in Philosophy. Today he continues to be an active researcher in metaphysics and philosophy of physics, and pursues his love of drawing as an illustrator for <em>Philosophy Now</em> magazine."
+			about: "After studying astrophysics at UCL, Athamos gravitated towards the philosophical questions of science, going on to study them at Oriel College, Oxford. Athamos completed his PhD on the 'arrow of time' at King's College London, where he won the King’s Teaching Excellence Award and the Jacobsen Prize in Philosophy. He continues there today as a Research Fellow, and pursues his love of drawing as an illustrator for <em>Philosophy Now</em> magazine."
 		},
 		{
 			imgName: 'kalle',
@@ -100,7 +100,7 @@ export default function TutorsSlider() {
 						</div>
 					</div>
 					<div className="tutor-details">
-						<div className="tutor-name">{activeSlide?.name}</div>
+						<div className="tutor-name text-white">{activeSlide?.name}</div>
 						<div className="tutor-qualification"><em>{activeSlide?.qualification}</em></div>
 					</div>
 				</div>
