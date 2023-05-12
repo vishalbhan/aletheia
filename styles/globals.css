@@ -574,8 +574,8 @@ section#process {
 }
 
 .tutor-image img {
-  width: 272px;
-  height: 350px;
+  width: 272px !important;
+  height: 350px !important;
   object-fit: cover;
   object-position: 50% 50%;
   filter: grayscale(1);
@@ -978,6 +978,10 @@ button svg {
   line-height: 53px; */
 }
 
+#join a {
+  color: var(--golden);
+}
+
 /*********************************************************************************************************
 **********************************************************************************************************
 
@@ -1160,8 +1164,8 @@ R E S P O N S I V E
   }
 
   .tutor-image img {
-    width: 160px;
-    height: 190px;
+    width: 160px !important;
+    height: 190px !important;
   }
 
   .tutor-about-container {
