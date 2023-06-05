@@ -24,8 +24,6 @@ export default function ServicesSection({ services }) {
             ))
           }
 
-          
-
         </div>
       </div>
     </section>
