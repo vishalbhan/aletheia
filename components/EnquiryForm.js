@@ -24,7 +24,7 @@ export default function EnquiryForm() {
     }
 
     return (
-        <form ref={formRef} id="enquiryForm" name="enquiry-form" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <form ref={formRef} id="enquiryForm" name="enquiry-form" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="enquiry-form" />
             <div className="input-group">
                 <label htmlFor="parent-name">Name of Parent/Guardian</label>
