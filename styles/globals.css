@@ -373,6 +373,26 @@ nav {
   right: -30%;
 }
 
+@media (max-width: 600px) {
+  .about-illustration.octopus,
+  .about-illustration.butterfly,
+  .about-illustration.nautilus {
+    width: 420px;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+    top: -320px;
+  }
+
+  .illustration.seahorse-2 {
+    width: 300px;
+    left: 25%;
+    transform: translateX(-50%);
+    right: auto;
+    top: -320px;
+  }
+}
+
 /* About Section
 ************************************************************/
 
@@ -1259,7 +1279,7 @@ R E S P O N S I V E
   }
 
   .cream-section {
-    padding-bottom: 200px;
+    padding-bottom: 0px;
   }
 
   .why-title {
