@@ -24,6 +24,8 @@ import ServicesSection from '@components/ServicesSection'
 import birdofparadise from '../public/images/birdofparadise.png'
 import sanityClient from 'sanityClient'
 import {PortableText} from '@portabletext/react'
+import { urlFor } from 'utils/urlFor'
+import TutorsGrid from '@components/TutorsGrid'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -32,19 +34,21 @@ export async function getStaticProps() {
   const services = await sanityClient.fetch('*[_type == "services"] | order(order asc)')
   const tutors = await sanityClient.fetch('*[_type == "tutors"] | order(order asc)')
   const testimonials = await sanityClient.fetch('*[_type == "testimonials"] | order(order asc)')
+  const institutions = await sanityClient.fetch('*[_type == "institutions"] | order(order asc)')
 
   return {
     props: {
       content,
       services,
       tutors,
-      testimonials
+      testimonials,
+      institutions
     }
   }
 }
 
 
-export default function Home({ content, services, tutors, testimonials }) {
+export default function Home({ content, services, tutors, testimonials, institutions }) {
   const { scroll } = useLocomotiveScroll()
 
   useEffect(() => {
@@ -248,7 +252,7 @@ export default function Home({ content, services, tutors, testimonials }) {
       <section id="tutors" data-scroll>
         <div className="container">
           <h1 data-scroll className="fade-up">Our Tutors</h1>
-          <TutorsSlider tutorsContent={tutors} />
+          <TutorsGrid tutorsContent={tutors} />
         </div>
       </section>
 
@@ -392,21 +396,29 @@ export default function Home({ content, services, tutors, testimonials }) {
         </div>
       </section>
 
+      <div className="container">
+        <div className="institutions-grid fade-up" data-scroll>
+          {
+            institutions.map((item, index) => (
+              <div className='institutions-grid-item' key={`institution-${index}`}>
+                <Image src={urlFor(item.image).url()} alt={item.title} width={100} height={100} objectFit='contain' />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
       <section id="enquiry" className="text-left">
         <div className="container">
-
           <h1 className="fade-up" data-scroll>Make an Enquiry</h1>
-
           <div className="enquiry-form-container fade-up" data-scroll>
             <EnquiryForm />
           </div>
-
           <div className="nautilus-2 illustration left" data-scroll data-scroll-speed="4" data-scroll-offset="0,10%">
             <div className="scale">
               <Image src={nautilus} alt="" priority />
             </div>
           </div>
-
         </div>
       </section>
 

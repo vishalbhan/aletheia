@@ -572,6 +572,27 @@ section#process {
 /* Tutors Section
 ************************************************************/
 
+.tutors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-gap: 80px;
+  margin-bottom: 150px;
+}
+
+.tutors-grid-item {
+  display: grid;
+  place-items: center;
+}
+
+.tutors-grid-inner {
+  cursor: pointer;
+  background: #EAE5D220;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
 #tutors {
   padding: 100px 0;
 }
@@ -591,15 +612,9 @@ section#process {
 
 .tutor-image {
   margin: 0 auto;
-}
-
-.tutor-image img {
-  width: 272px !important;
-  height: 350px !important;
-  object-fit: cover;
-  object-position: 50% 50%;
   filter: grayscale(1);
-  border: 2px solid #EAE5D250;
+  margin-bottom: 12px;
+  text-align: center;
 }
 
 .tutor-about {
@@ -619,10 +634,10 @@ section#process {
 
 .tutor-name {
   font-family: 'Mrs Eaves Roman';
-  font-size: 24px;
+  font-size: 18px;
   text-transform: uppercase;
   margin-bottom: 12px;
-  letter-spacing: 3px;
+  letter-spacing: 1.4px;
 }
 
 .tutor-qualification {
@@ -1002,6 +1017,19 @@ button svg {
   color: var(--golden);
 }
 
+.institutions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 40px;
+  margin: 100px 0 150px;
+}
+
+.institutions-grid-item {
+  display: grid;
+  place-items: center;
+  filter: grayscale(1);
+}
+
 /*********************************************************************************************************
 **********************************************************************************************************
 
@@ -1166,55 +1194,27 @@ R E S P O N S I V E
   }
 
   #tutors {
-    text-align: left;
     margin-bottom: 150px;
   }
 
-  .tutors-card-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    grid-gap: 12px;
+  .tutors-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
   }
 
-  .tutor-image {
-    margin: 0;
-    order: 1
-  }
-
-  .tutor-image img {
-    width: 160px !important;
-    height: 190px !important;
-  }
-
-  .tutor-about-container {
-    order: 3;
-  }
-
-  .tutor-about {
-    min-height: 0;
-    margin-bottom: 12px;
-  }
-
-  .tutor-about p {
-    font-size: 15px;
-    margin: 0;
-  }
-
-  .tutor-details {
-    order: 2;
+  .tutors-grid-inner {
+    height: 100%;
+    padding: 10px;
   }
 
   .tutor-name {
     color: #Fff;
-    font-size: 17px;
-    margin-bottom: 4px;
-    letter-spacing: 1.6px;
+    font-size: 14px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
   }
 
   .tutor-qualification {
-    color: #Fff;
     font-size: 15px;
   }
 
