@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formspark/use-formspark": "^0.1.39",
     "@portabletext/react": "^3.0.0",
     "@sanity/client": "^6.0.1",
     "@sanity/image-url": "^1.0.2",
