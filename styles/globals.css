@@ -597,6 +597,44 @@ section#process {
   padding: 100px 0;
 }
 
+.tutors-modal {
+  background: var(--cream);
+  max-width: 768px;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border: none;
+  padding: 40px;
+  transition: all 0.3s ease;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 32px;
+  color: var(--golden);
+  transition: all 0.6s var(--ease);
+}
+
+@media (max-width: 768px) {
+  .tutors-modal {
+    width: 100vw;
+    top: auto;
+    left: 0;
+    bottom: 0;
+    translate: 0 0;
+    max-height: 90vh;
+    overflow-y: scroll;
+  }
+
+  .modal-tutor-image {
+    width: 180px;
+  }
+}
+
 .tutors-slider-card {
   width: 100%;
   background: #EAE5D220;
@@ -1208,7 +1246,6 @@ R E S P O N S I V E
   }
 
   .tutor-name {
-    color: #Fff;
     font-size: 14px;
     margin-bottom: 12px;
     letter-spacing: 1px;
