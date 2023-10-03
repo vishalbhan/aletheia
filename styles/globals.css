@@ -374,22 +374,29 @@ nav {
 }
 
 @media (max-width: 600px) {
-  .about-illustration.octopus,
-  .about-illustration.butterfly,
+  .about-illustration.octopus {
+    width: 320px;
+    right: -80px;
+    top: 140px;
+  }
+
+  .about-illustration.butterfly {
+    width: 300px;
+    left: -150px;
+    top: 180px;
+  }
+
   .about-illustration.nautilus {
-    width: 420px;
-    left: 50%;
-    transform: translateX(-50%);
-    right: auto;
-    top: -320px;
+    width: 320px;
+    right: -50px;
+    top: 220px;
   }
 
   .illustration.seahorse-2 {
-    width: 300px;
-    left: 25%;
-    transform: translateX(-50%);
+    width: 200px;
+    left: 80px;
     right: auto;
-    top: -320px;
+    top: 50px;
   }
 }
 
@@ -492,6 +499,16 @@ nav {
   transition: all 0.5s ease;
 }
 
+@media (max-width: 768px) {
+  .services-item {
+    padding: 16px 0;
+  }
+
+  .services-item p {
+    color: var(--golden);
+  }
+}
+
 .services-items.open .services-item {
   opacity: 1;
   transform: translateY(0);
@@ -579,6 +596,12 @@ section#process {
   margin-bottom: 150px;
 }
 
+@media (max-width: 768px) {
+  .tutors-grid {
+    margin-bottom: 0;
+  }
+}
+
 .tutors-grid-item {
   display: grid;
   place-items: center;
@@ -609,8 +632,9 @@ section#process {
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  border: none;
   padding: 40px;
+  border: none;
+  outline: none;
 }
 
 .tutors-modal p {
@@ -1210,6 +1234,12 @@ R E S P O N S I V E
 
   #about {
     min-height: 90vh;
+    padding: 0;
+  }
+
+  .about-section {
+    padding: 100px 0;
+    margin-bottom: 50px;
   }
 
   .about-text {
@@ -1229,7 +1259,6 @@ R E S P O N S I V E
 
   .mobile-services {
     display: block;
-    margin-bottom: 100px;
   }
 
   .mobile-service-item {
@@ -1251,7 +1280,7 @@ R E S P O N S I V E
   }
 
   #tutors {
-    margin-bottom: 150px;
+    margin-bottom: 0;
   }
 
   .tutors-grid {
@@ -1292,8 +1321,9 @@ R E S P O N S I V E
   }
 
   .mushroom {
-    left: -45%;
+    left: -50%;
     transform: translateY(100px);
+    top: -300px;
   }
 
   .process-item {
@@ -1312,13 +1342,14 @@ R E S P O N S I V E
   }
 
   .pineapple {
-    width: 75%;
-    right: -36%;
-    bottom: 25%;
+    width: 250px;
+    right: -90px;
+    top: -50%;
   }
 
   #quote-2 {
     min-height: 50vh;
+    margin-bottom: 100px;
   }
 
   #quote-2 .quote-logo {
@@ -1330,12 +1361,17 @@ R E S P O N S I V E
     width: 35%;
     left: 5%;
     top: -50%;
-    bottom: auto;
+    top: 110%;
     transform: translateY(150px);
   }
 
   .cream-section {
-    padding-bottom: 0px;
+    padding: 0;
+    margin-bottom: 100px;
+  }
+
+  #why {
+    padding-bottom: 0;
   }
 
   .why-title {
@@ -1347,8 +1383,16 @@ R E S P O N S I V E
     font-size: 20px;
   }
 
+  #quote-3 {
+    padding: 0;
+  }
+
   .butterfly {
     right: -62%;
+  }
+
+  #testimonials {
+    margin-top: 300px;
   }
 
   .testimonial-card {
